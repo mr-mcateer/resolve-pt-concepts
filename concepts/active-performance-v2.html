@@ -25,6 +25,9 @@
     <meta name="twitter:title" content="Running & Sports Physical Therapy | Resolve PT Bend">
     <meta name="twitter:description" content="Get back to the trail. Stay on it. Evidence-based PT for runners, skiers, and active humans in Bend.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/resolve-logo-stacked.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,6 +81,8 @@
             "@type": "City",
             "name": "Bend, Oregon"
         },
+        "image": "https://resolveptbend.com/images/resolve-logo-horizontal.png",
+        "logo": "https://resolveptbend.com/images/resolve-logo-horizontal.png",
         "sameAs": [
             "https://www.facebook.com/resolveptbend",
             "https://www.instagram.com/resolveptbend",
@@ -103,6 +108,10 @@
            CSS CUSTOM PROPERTIES
            ============================================ */
         :root {
+            /* Brand Identity (official Resolve PT logo colors) */
+            --brand-dark: #283B45;
+            --brand-blue: #8CC6EC;
+
             /* Backgrounds */
             --bg-offwhite: #F8F6F3;
             --bg-deep-slate: #1C2833;
@@ -127,6 +136,22 @@
             /* Typography */
             --font-heading: 'Barlow', sans-serif;
             --font-body: 'IBM Plex Sans', sans-serif;
+
+            /* Fluid Type Scale */
+            --fs-xs:    clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+            --fs-sm:    clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+            --fs-base:  clamp(1rem,     0.9rem  + 0.5vw,  1.125rem);
+            --fs-md:    clamp(1.125rem, 1rem    + 0.6vw,  1.35rem);
+            --fs-lg:    clamp(1.35rem,  1.1rem  + 1.1vw,  1.75rem);
+            --fs-xl:    clamp(1.75rem,  1.3rem  + 2vw,    2.5rem);
+            --fs-2xl:   clamp(2.25rem,  1.5rem  + 3.5vw,  3.75rem);
+            --fs-3xl:   clamp(3rem,     2rem    + 4.5vw,  5rem);
+
+            /* Tinted Shadow System */
+            --shadow-sm: 0 1px 3px hsla(200, 25%, 15%, 0.06), 0 1px 2px hsla(200, 25%, 15%, 0.04);
+            --shadow-md: 0 4px 12px hsla(200, 25%, 15%, 0.08), 0 2px 4px hsla(200, 25%, 15%, 0.04);
+            --shadow-lg: 0 12px 32px hsla(200, 25%, 15%, 0.1), 0 4px 8px hsla(200, 25%, 15%, 0.06);
+            --shadow-xl: 0 24px 48px hsla(200, 25%, 15%, 0.12), 0 8px 16px hsla(200, 25%, 15%, 0.06);
 
             /* Spacing */
             --space-xs: 0.5rem;
@@ -271,6 +296,9 @@
             line-height: 1.15;
         }
 
+        h1, h2, h3, blockquote { text-wrap: balance; }
+        p, li { text-wrap: pretty; }
+
         h1 {
             font-size: clamp(2.25rem, 5.5vw, 4rem);
             font-weight: 700;
@@ -360,6 +388,10 @@
             transform: translateY(-2px);
         }
 
+        .btn-orange, .btn-green, .btn-white, .btn-outline-white {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
         /* ============================================
            NAVBAR
            ============================================ */
@@ -376,9 +408,9 @@
         }
 
         .navbar-solid {
-            background-color: rgba(248, 246, 243, 0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(248, 246, 243, 0.9);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
             border-bottom: 1px solid var(--border-light);
         }
 
@@ -388,17 +420,23 @@
             align-items: center;
         }
 
-        .navbar-brand a {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            font-size: 1.375rem;
-            letter-spacing: 0.04em;
-            color: #fff;
-            transition: color var(--transition-fast);
+        .navbar-brand {
+            display: flex;
+            align-items: center;
         }
 
-        .navbar-solid .navbar-brand a {
-            color: var(--text-charcoal);
+        .navbar-logo {
+            height: 36px;
+            width: auto;
+            display: block;
+        }
+
+        /* On transparent navbar over dark hero, invert the logo for visibility */
+        .navbar:not(.navbar-solid) .navbar-logo {
+            filter: brightness(0) invert(1);
+        }
+        .navbar.navbar-solid .navbar-logo {
+            filter: none;
         }
 
         .nav-links {
@@ -554,6 +592,18 @@
             inset: 0;
             background: linear-gradient(to bottom, rgba(28, 40, 51, 0.5), rgba(28, 40, 51, 0.7));
             z-index: 2;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: 2;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 256px 256px;
         }
 
         .hero-content {
@@ -1105,6 +1155,28 @@
             color: rgba(248, 246, 243, 0.4);
         }
 
+        .footer-logo {
+            height: 80px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            margin-bottom: 1rem;
+        }
+
+        /* ============================================
+           SCROLL PROGRESS BAR
+           ============================================ */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--peak-orange);
+            transform-origin: left;
+            transform: scaleX(0);
+            z-index: 10001;
+        }
+
         @media (max-width: 600px) {
             .footer-grid {
                 flex-direction: column;
@@ -1116,6 +1188,8 @@
 
 <body>
 
+    <div class="scroll-progress" aria-hidden="true"></div>
+
     <!-- Skip to content -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -1124,9 +1198,9 @@
          ============================== -->
     <header class="navbar" role="banner">
         <div class="container">
-            <div class="navbar-brand">
-                <a href="/" aria-label="Resolve PT Home">RESOLVE <span style="font-weight:600; font-family:var(--font-body); font-size:0.875rem; letter-spacing:0.14em; opacity:0.85;">PT</span></a>
-            </div>
+            <a href="#" class="navbar-brand" aria-label="Resolve Physical Therapy Home">
+                <img src="../images/resolve-logo-horizontal.png" alt="Resolve Physical Therapy" class="navbar-logo" width="180" height="auto">
+            </a>
 
             <nav class="nav-links" id="main-nav" aria-label="Main navigation">
                 <a href="#running" class="nav-link">Running rehab</a>
@@ -1393,7 +1467,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h2>RESOLVE <span style="font-weight:600; font-family:var(--font-body); font-size:0.875rem; letter-spacing:0.14em; opacity:0.7;">PT</span></h2>
+                    <img src="../images/resolve-logo-stacked.png" alt="Resolve Physical Therapy" class="footer-logo" width="120" height="auto">
                     <p>Evidence-based physical therapy in Bend, Oregon.</p>
 
                     <div class="social-links">
@@ -1685,6 +1759,39 @@
                 }
             });
         });
+
+        // ===========================
+        // 8. SCROLL PROGRESS BAR
+        // ===========================
+        var progressBar = document.querySelector('.scroll-progress');
+        if (progressBar) {
+            window.addEventListener('scroll', function () {
+                var scrollTop = document.documentElement.scrollTop;
+                var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                progressBar.style.transform = 'scaleX(' + (scrollTop / scrollHeight) + ')';
+            }, { passive: true });
+        }
+
+        // ===========================
+        // 9. MAGNETIC BUTTON EFFECT
+        // ===========================
+        if (!prefersReducedMotion) {
+            document.querySelectorAll('.btn-orange, .btn-green').forEach(function (btn) {
+                btn.addEventListener('mousemove', function (e) {
+                    var rect = btn.getBoundingClientRect();
+                    var x = e.clientX - rect.left - rect.width / 2;
+                    var y = e.clientY - rect.top - rect.height / 2;
+                    btn.style.transform = 'translate(' + (x * 0.2) + 'px, ' + (y * 0.2) + 'px)';
+                });
+                btn.addEventListener('mouseleave', function () {
+                    btn.style.transform = '';
+                    btn.style.transition = 'all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                });
+                btn.addEventListener('mouseenter', function () {
+                    btn.style.transition = 'all 0.15s ease';
+                });
+            });
+        }
 
     })();
     </script>
