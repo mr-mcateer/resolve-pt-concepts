@@ -135,6 +135,48 @@
         .card:hover .card-link {
             color: var(--hover);
         }
+
+        .section-divider {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            position: relative;
+        }
+
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .section-divider span {
+            background: var(--bg);
+            padding: 0 1.5rem;
+            position: relative;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #9CA3AF;
+        }
+
+        .badge-warm-v2 {
+            background: #C4836A;
+            color: #FFFFFF;
+        }
+
+        .badge-perf-v2 {
+            background: #3D7B5F;
+            color: #FFFFFF;
+        }
+
+        .badge-clin-v2 {
+            background: #2A8F8F;
+            color: #FFFFFF;
+        }
     </style>
 </head>
 
@@ -171,6 +213,36 @@
                 <h2>Clinical Trust</h2>
                 <p>Refined, highly credible, and physician-referral ready. Mayo Clinic aesthetic utilizing medical teal,
                     crisp white spacing, and authoritative serif typography.</p>
+                <div class="card-link">View Prototype <span aria-hidden="true">&rarr;</span></div>
+            </a>
+        </div>
+
+        <div class="section-divider">
+            <span>Version 2 — SEO Optimized, Self-Contained</span>
+        </div>
+
+        <div class="grid">
+            <!-- V2 Option 1: PNW Warmth -->
+            <a href="concepts/pnw-warmth-v2.html" class="card">
+                <span class="card-badge badge-warm-v2">V2 — Option 1</span>
+                <h2>Pacific Northwest Warmth</h2>
+                <p>Self-contained single-file rebuild. Ken Burns hero, horizontal team carousel, testimonial carousel. Full Schema.org structured data, Open Graph, and local SEO optimization.</p>
+                <div class="card-link">View Prototype <span aria-hidden="true">&rarr;</span></div>
+            </a>
+
+            <!-- V2 Option 2: Active Performance -->
+            <a href="concepts/active-performance-v2.html" class="card">
+                <span class="card-badge badge-perf-v2">V2 — Option 2</span>
+                <h2>Active Performance</h2>
+                <p>Trail green and peak orange palette. Stat counter bar, running rehab spotlight with parallax, dark contrast sections. Targets "running physical therapy Bend" search queries.</p>
+                <div class="card-link">View Prototype <span aria-hidden="true">&rarr;</span></div>
+            </a>
+
+            <!-- V2 Option 3: Clinical Trust -->
+            <a href="concepts/clinical-trust-v2.html" class="card">
+                <span class="card-badge badge-clin-v2">V2 — Option 3</span>
+                <h2>Clinical Trust</h2>
+                <p>Serif authority meets warm practice. Split hero, 3-step approach process, referring providers section. Targets post-surgical and physician-referral audiences with clinical credibility.</p>
                 <div class="card-link">View Prototype <span aria-hidden="true">&rarr;</span></div>
             </a>
         </div>
