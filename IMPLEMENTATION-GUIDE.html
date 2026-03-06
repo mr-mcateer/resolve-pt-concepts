@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resolve Physical Therapy — Website Implementation Guide</title>
+  <style>
+    /* ============================================================
+       PDF-OPTIMIZED PRINT STYLESHEET
+       Instructionally Designed Implementation Guide
+       Color System: Resolve PT Brand
+       ============================================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+    :root {
+      --brand-primary: #4A90A4;
+      --brand-primary-light: #E8F4F8;
+      --brand-primary-dark: #3A7A8E;
+      --brand-accent: #D4956A;
+      --brand-accent-light: #FDF0E8;
+      --brand-dark: #2D3436;
+      --brand-text: #333333;
+      --brand-text-light: #666666;
+      --brand-bg: #FFFFFF;
+      --brand-bg-light: #F7F9FC;
+      --brand-border: #E2E8F0;
+      --brand-success: #48BB78;
+      --brand-success-light: #F0FFF4;
+      --brand-warning: #ED8936;
+      --brand-warning-light: #FFFAF0;
+      --brand-danger: #E53E3E;
+      --brand-danger-light: #FFF5F5;
+      --brand-info: #4299E1;
+      --brand-info-light: #EBF8FF;
+      --radius: 8px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.65;
+      color: var(--brand-text);
+      background: var(--brand-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ============================================================
+       PAGE LAYOUT & PRINT CONTROLS
+       ============================================================ */
+    .page {
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.6in 0.75in;
+    }
+
+    .page-break { page-break-before: always; }
+    .no-break { page-break-inside: avoid; }
+
+    @page {
+      size: letter;
+      margin: 0.5in 0.6in;
+    }
+
+    @media print {
+      body { font-size: 9.5pt; line-height: 1.6; }
+      .page { padding: 0.2in 0.1in; max-width: none; }
+      .page-break { page-break-before: always; }
+      .no-break { page-break-inside: avoid; }
+      .no-print { display: none !important; }
+      .cover-page { min-height: auto; }
+    }
+
+    /* ============================================================
+       COVER PAGE
+       ============================================================ */
+    .cover-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%);
+      color: white;
+      padding: 2in 1in;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover-page::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 600px;
+      height: 600px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 50%;
+    }
+
+    .cover-page::after {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      left: -20%;
+      width: 500px;
+      height: 500px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+
+    .cover-logo {
+      width: 80px;
+      height: 80px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 36pt;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28pt;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-subtitle {
+      font-size: 14pt;
+      font-weight: 400;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-divider {
+      width: 80px;
+      height: 3px;
+      background: var(--brand-accent);
+      border-radius: 2px;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-meta {
+      font-size: 10pt;
+      opacity: 0.8;
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY
+       ============================================================ */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22pt;
+      font-weight: 700;
+      color: var(--brand-primary);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 15pt;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-top: 1.8rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--brand-border);
+    }
+
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-top: 1.4rem;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: var(--brand-text);
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    p { margin-bottom: 0.6rem; }
+
+    strong { font-weight: 700; color: var(--brand-dark); }
+
+    a { color: var(--brand-primary); text-decoration: none; }
+
+    /* ============================================================
+       STEP HEADER (big numbered step banners)
+       ============================================================ */
+    .step-header {
+      background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%);
+      color: white;
+      padding: 1.2rem 1.5rem;
+      border-radius: var(--radius);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20pt;
+      font-weight: 800;
+    }
+
+    .step-header-content h1 {
+      color: white;
+      font-size: 16pt;
+      margin-bottom: 0.15rem;
+    }
+
+    .step-header-content p {
+      font-size: 9.5pt;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    /* ============================================================
+       ROADMAP TABLE
+       ============================================================ */
+    .roadmap-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 9.5pt;
+    }
+
+    .roadmap-table th {
+      background: var(--brand-primary);
+      color: white;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .roadmap-table th:first-child { border-radius: var(--radius) 0 0 0; }
+    .roadmap-table th:last-child { border-radius: 0 var(--radius) 0 0; }
+
+    .roadmap-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--brand-border);
+    }
+
+    .roadmap-table tr:nth-child(even) td { background: var(--brand-bg-light); }
+
+    .roadmap-table .step-badge {
+      display: inline-block;
+      background: var(--brand-primary);
+      color: white;
+      font-weight: 700;
+      font-size: 8pt;
+      padding: 0.15rem 0.5rem;
+      border-radius: 12px;
+    }
+
+    /* ============================================================
+       EDIT CARDS
+       ============================================================ */
+    .edit-card {
+      border: 1px solid var(--brand-border);
+      border-radius: var(--radius);
+      margin-bottom: 1.2rem;
+      overflow: hidden;
+      page-break-inside: avoid;
+    }
+
+    .edit-card-header {
+      background: var(--brand-bg-light);
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--brand-border);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .edit-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--brand-primary);
+      color: white;
+      font-weight: 700;
+      font-size: 8.5pt;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+
+    .edit-badge.critical { background: var(--brand-danger); }
+    .edit-badge.nice { background: var(--brand-accent); }
+
+    .edit-card-header h3 {
+      margin: 0;
+      font-size: 11pt;
+    }
+
+    .edit-card-body {
+      padding: 0.8rem 1rem;
+    }
+
+    .edit-meta {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-size: 9pt;
+      color: var(--brand-text-light);
+    }
+
+    .edit-meta span { display: flex; align-items: center; gap: 0.3rem; }
+    .edit-meta .label { font-weight: 600; color: var(--brand-text); }
+
+    /* ============================================================
+       CALLOUT BOXES
+       ============================================================ */
+    .callout {
+      padding: 0.7rem 1rem;
+      border-radius: var(--radius);
+      margin: 0.8rem 0;
+      font-size: 9.5pt;
+      line-height: 1.6;
+      page-break-inside: avoid;
+    }
+
+    .callout-icon {
+      font-size: 12pt;
+      margin-right: 0.4rem;
+      vertical-align: middle;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      display: inline;
+    }
+
+    .callout.tip {
+      background: var(--brand-info-light);
+      border-left: 4px solid var(--brand-info);
+    }
+
+    .callout.warning {
+      background: var(--brand-warning-light);
+      border-left: 4px solid var(--brand-warning);
+    }
+
+    .callout.success {
+      background: var(--brand-success-light);
+      border-left: 4px solid var(--brand-success);
+    }
+
+    .callout.danger {
+      background: var(--brand-danger-light);
+      border-left: 4px solid var(--brand-danger);
+    }
+
+    .callout.info {
+      background: var(--brand-primary-light);
+      border-left: 4px solid var(--brand-primary);
+    }
+
+    /* ============================================================
+       CODE BLOCKS
+       ============================================================ */
+    .code-block {
+      background: #1E2A3A;
+      color: #E2E8F0;
+      padding: 0.7rem 1rem;
+      border-radius: var(--radius);
+      font-family: 'SF Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
+      font-size: 8.5pt;
+      line-height: 1.6;
+      overflow-x: auto;
+      margin: 0.5rem 0;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    code {
+      font-family: 'SF Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
+      font-size: 8.5pt;
+      background: var(--brand-bg-light);
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      border: 1px solid var(--brand-border);
+      color: var(--brand-danger);
+    }
+
+    /* ============================================================
+       FIND & REPLACE VISUAL
+       ============================================================ */
+    .find-replace {
+      margin: 0.6rem 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--brand-border);
+    }
+
+    .find-replace .fr-label {
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.3rem 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .find-replace .find-label {
+      background: #FEEBC8;
+      color: #C05621;
+      border-bottom: 1px solid #FBD38D;
+    }
+
+    .find-replace .replace-label {
+      background: #C6F6D5;
+      color: #276749;
+      border-bottom: 1px solid #9AE6B4;
+    }
+
+    .find-replace .fr-code {
+      background: #FFFDF5;
+      padding: 0.5rem 0.75rem;
+      font-family: 'SF Mono', 'Consolas', monospace;
+      font-size: 8pt;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-all;
+      border-bottom: 1px solid var(--brand-border);
+    }
+
+    .find-replace .fr-code.replace-code {
+      background: #F0FFF4;
+      border-bottom: none;
+    }
+
+    /* ============================================================
+       NUMBERED STEPS
+       ============================================================ */
+    .steps-list {
+      list-style: none;
+      counter-reset: step-counter;
+      padding-left: 0;
+      margin: 0.5rem 0;
+    }
+
+    .steps-list li {
+      counter-increment: step-counter;
+      padding: 0.35rem 0 0.35rem 2rem;
+      position: relative;
+      margin-bottom: 0.2rem;
+    }
+
+    .steps-list li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0.3rem;
+      width: 20px;
+      height: 20px;
+      background: var(--brand-primary);
+      color: white;
+      border-radius: 50%;
+      font-size: 8pt;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ============================================================
+       CHECKLISTS
+       ============================================================ */
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.5rem 0;
+    }
+
+    .checklist li {
+      padding: 0.3rem 0 0.3rem 1.8rem;
+      position: relative;
+      margin-bottom: 0.15rem;
+    }
+
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.4rem;
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--brand-border);
+      border-radius: 3px;
+      background: white;
+    }
+
+    .checklist.critical li::before { border-color: var(--brand-danger); }
+    .checklist.nice li::before { border-color: var(--brand-accent); }
+
+    /* ============================================================
+       COMPARISON TABLE
+       ============================================================ */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.8rem 0;
+      font-size: 9pt;
+    }
+
+    .comparison-table th {
+      background: var(--brand-bg-light);
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid var(--brand-primary);
+      font-size: 9pt;
+    }
+
+    .comparison-table td {
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--brand-border);
+      vertical-align: top;
+    }
+
+    .comparison-table tr:last-child td { border-bottom: 2px solid var(--brand-border); }
+
+    /* ============================================================
+       HOSTING OPTION CARDS
+       ============================================================ */
+    .option-card {
+      border: 2px solid var(--brand-border);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin-bottom: 1rem;
+      page-break-inside: avoid;
+    }
+
+    .option-card.recommended {
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 1px var(--brand-primary-light);
+    }
+
+    .option-card .option-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .option-card .option-letter {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      background: var(--brand-bg-light);
+      border: 2px solid var(--brand-border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 12pt;
+      color: var(--brand-primary);
+    }
+
+    .option-card.recommended .option-letter {
+      background: var(--brand-primary);
+      color: white;
+      border-color: var(--brand-primary);
+    }
+
+    .rec-badge {
+      display: inline-block;
+      background: var(--brand-success);
+      color: white;
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.1rem 0.4rem;
+      border-radius: 8px;
+      margin-left: 0.3rem;
+    }
+
+    .option-card .option-meta {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 0.6rem;
+      font-size: 9pt;
+    }
+
+    .option-card .option-meta .meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .option-card .option-meta .meta-label {
+      font-weight: 600;
+      color: var(--brand-text-light);
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .option-card .option-meta .meta-value {
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+
+    /* ============================================================
+       TABLE OF CONTENTS
+       ============================================================ */
+    .toc {
+      background: var(--brand-bg-light);
+      border: 1px solid var(--brand-border);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .toc h2 {
+      border: none;
+      margin-top: 0;
+      font-size: 13pt;
+      padding-bottom: 0.3rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .toc-list > li {
+      padding: 0.4rem 0;
+      border-bottom: 1px dotted var(--brand-border);
+    }
+
+    .toc-list > li:last-child { border-bottom: none; }
+
+    .toc-step {
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+
+    .toc-desc { color: var(--brand-text); }
+    .toc-time { color: var(--brand-text-light); font-size: 9pt; float: right; }
+
+    .toc-sub {
+      list-style: none;
+      padding: 0.2rem 0 0 1.5rem;
+      font-size: 9pt;
+      color: var(--brand-text-light);
+    }
+
+    .toc-sub li { padding: 0.15rem 0; }
+
+    /* ============================================================
+       SECTION DIVIDERS
+       ============================================================ */
+    .section-divider {
+      border: none;
+      height: 2px;
+      background: linear-gradient(90deg, var(--brand-primary), var(--brand-accent), var(--brand-primary));
+      margin: 2rem 0;
+      opacity: 0.3;
+    }
+
+    /* ============================================================
+       QUICK START SUMMARY BOX
+       ============================================================ */
+    .quick-start {
+      background: var(--brand-primary-light);
+      border: 2px solid var(--brand-primary);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .quick-start p {
+      margin: 0;
+      font-size: 10pt;
+      color: var(--brand-dark);
+    }
+
+    .time-estimate {
+      display: inline-block;
+      background: var(--brand-accent);
+      color: white;
+      font-weight: 700;
+      font-size: 8.5pt;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+    }
+
+    /* ============================================================
+       CHECKPOINT BANNER
+       ============================================================ */
+    .checkpoint {
+      background: linear-gradient(135deg, var(--brand-success) 0%, #38A169 100%);
+      color: white;
+      padding: 1rem 1.2rem;
+      border-radius: var(--radius);
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .checkpoint h3 {
+      color: white;
+      margin: 0 0 0.3rem;
+      font-size: 12pt;
+    }
+
+    .checkpoint p {
+      margin: 0;
+      opacity: 0.95;
+      font-size: 9.5pt;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .guide-footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      color: var(--brand-text-light);
+      font-size: 8.5pt;
+      border-top: 1px solid var(--brand-border);
+      margin-top: 2rem;
+    }
+
+    /* Utility */
+    .mt-0 { margin-top: 0; }
+    .mb-0 { margin-bottom: 0; }
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 1rem; }
+    .text-sm { font-size: 9pt; }
+    .text-muted { color: var(--brand-text-light); }
+    .text-center { text-align: center; }
+    .fw-bold { font-weight: 700; }
+    .indent { padding-left: 1.5rem; }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     COVER PAGE
+     ============================================================ -->
+<div class="cover-page">
+  <div class="cover-logo">R</div>
+  <h1 class="cover-title">Website Implementation Guide</h1>
+  <p class="cover-subtitle">Resolve Physical Therapy &mdash; Bend, Oregon</p>
+  <div class="cover-divider"></div>
+  <div class="cover-meta">
+    Your step-by-step guide to launching your new website<br>
+    Estimated total time: 2&ndash;3 hours<br>
+    No technical experience required
+  </div>
+</div>
+
+<!-- ============================================================
+     TABLE OF CONTENTS
+     ============================================================ -->
+<div class="page page-break">
+
+  <div class="quick-start">
+    <p>You have a complete, ready-to-go website built with standard web files (HTML, CSS, and JavaScript) &mdash; no fancy frameworks or databases required. To get it live on the internet, you need to do four things: make a few text edits, set up a free form service, upload everything to a hosting provider, and handle basic privacy items. <span class="time-estimate">Total: 2&ndash;3 hours</span></p>
+  </div>
+
+  <div class="toc">
+    <h2>Roadmap &mdash; Do These Steps In This Order</h2>
+    <ol class="toc-list">
+      <li>
+        <span class="toc-step">Step 1:</span> <span class="toc-desc">Edit Your Website Files</span> <span class="toc-time">~60&ndash;90 min</span>
+        <ul class="toc-sub">
+          <li>Edits #1&ndash;#12: Critical fixes (phone, email, photos, forms, video, maps)</li>
+          <li>Edits #13&ndash;#16: Polish items (favicon, privacy links, OG images)</li>
+        </ul>
+      </li>
+      <li>
+        <span class="toc-step">Step 2:</span> <span class="toc-desc">Set Up Your Contact Forms</span> <span class="toc-time">~15 min</span>
+        <ul class="toc-sub">
+          <li>Web3Forms (recommended), Formspree, or Netlify Forms</li>
+        </ul>
+      </li>
+      <li>
+        <span class="toc-step">Step 3:</span> <span class="toc-desc">Choose Hosting &amp; Go Live</span> <span class="toc-time">~30 min</span>
+        <ul class="toc-sub">
+          <li>Netlify (easiest), Cloudflare Pages (fastest), or Namecheap (email included)</li>
+        </ul>
+      </li>
+      <li>
+        <span class="toc-step">Step 4:</span> <span class="toc-desc">Privacy, Legal &amp; Compliance</span> <span class="toc-time">~15 min</span>
+        <ul class="toc-sub">
+          <li>HIPAA, privacy policy, accessibility, Google Business Profile</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="callout info">
+    <span class="callout-icon">&#9432;</span>
+    <span class="callout-title">Why this order?</span> If you upload your site first and then make edits, you have to upload again. By editing first, you only upload once and your site is ready from the moment it goes live.
+  </div>
+
+  <h2 class="mt-0">Before You Begin</h2>
+  <h4>What You Need:</h4>
+  <ul>
+    <li><strong>Notepad++</strong> installed &mdash; free download: <code>notepad-plus-plus.org/downloads/</code></li>
+    <li>Your website folder on your computer (the folder with <code>index.html</code>, <code>services.html</code>, <code>about.html</code>, <code>contact.html</code>)</li>
+    <li>About 2&ndash;3 hours of focused time</li>
+  </ul>
+
+  <h4>How Find &amp; Replace Works (You Will Use This a LOT):</h4>
+  <ol class="steps-list">
+    <li>With the file open in Notepad++, press <strong>Ctrl+H</strong> on your keyboard</li>
+    <li>In the <strong>Find what:</strong> box, paste exactly what the instructions say</li>
+    <li>In the <strong>Replace with:</strong> box, paste exactly what the instructions say</li>
+    <li>Click <strong>Replace All</strong> (or just <strong>Replace</strong> to go one at a time)</li>
+    <li>Press <strong>Ctrl+S</strong> to save the file</li>
+  </ol>
+
+  <div class="callout tip">
+    <span class="callout-icon">&#128161;</span>
+    <span class="callout-title">If Notepad++ says "0 replacements found"</span> &mdash; the spacing in your file might be slightly different. Try using Ctrl+F (Find) first to locate the text, then edit it by hand. The important thing is finding the right text and changing it.
+  </div>
+
+  <!-- Step 1 starts here on the same page to avoid white space -->
+  <div class="step-header" style="margin-top: 1.5rem;">
+    <div class="step-number">1</div>
+    <div class="step-header-content">
+      <h1>Editing Your Website with Notepad++</h1>
+      <p>Personalize content, fix placeholders, add your real photos</p>
+    </div>
+  </div>
+
+  <h2>Critical Fixes &mdash; Your Site Won't Work Without These</h2>
+
+  <!-- EDIT #1 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #1</span>
+      <h3>Download the Hero Image Locally</h3>
+    </div>
+    <div class="edit-card-body">
+      <div class="edit-meta">
+        <span><span class="label">File:</span> index.html</span>
+      </div>
+      <p><strong>Problem:</strong> The hero banner photo loads from an external server (Unsplash). If that server goes down, your hero shows a broken image.</p>
+
+      <h4>Step 1: Download the image</h4>
+      <ol class="steps-list">
+        <li>Open <code>index.html</code> in Notepad++ and look for a line containing an Unsplash URL</li>
+        <li>Copy that entire URL, paste it in your browser, press Enter</li>
+        <li>Right-click the image &rarr; <strong>"Save image as..."</strong></li>
+        <li>Save into your <code>images</code> folder as <strong>hero.jpg</strong></li>
+      </ol>
+
+      <h4>Step 2: Update the code</h4>
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">https://images.unsplash.com/photo-... <em>(the full URL you copied)</em></div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code">images/hero.jpg</div>
+      </div>
+
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> Your hero image now loads from your own files.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT #2 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #2</span>
+      <h3>Fix the YouTube Video Embed</h3>
+    </div>
+    <div class="edit-card-body">
+      <div class="edit-meta">
+        <span><span class="label">File:</span> index.html</span>
+        <span><span class="label">Line:</span> ~335</span>
+      </div>
+      <p><strong>Problem:</strong> The video section shows <code>YOUR_VIDEO_ID</code> instead of a real video.</p>
+
+      <h4>Get your YouTube video ID:</h4>
+      <p>From a URL like <code>youtube.com/watch?v=dQw4w9WgXcQ</code>, the video ID is the code after <code>v=</code></p>
+
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">https://www.youtube.com/embed/YOUR_VIDEO_ID</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code">https://www.youtube.com/embed/<em>PASTE_YOUR_ID_HERE</em></div>
+      </div>
+
+      <div class="callout tip">
+        <span class="callout-icon">&#128161;</span> <span class="callout-title">No video yet?</span> You can skip this edit for now. The section will just show a blank player.
+      </div>
+
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> Your YouTube video displays properly.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT #3 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #3</span>
+      <h3>Fix the Fake Phone Number on the Services Page</h3>
+    </div>
+    <div class="edit-card-body">
+      <div class="edit-meta">
+        <span><span class="label">File:</span> services.html</span>
+        <span><span class="label">Line:</span> ~336</span>
+      </div>
+      <p><strong>Problem:</strong> The services page footer shows <code>(541) 000-0000</code> instead of your real number.</p>
+
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">(541) 000-0000</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code">(541) 306-1099</div>
+      </div>
+
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> Correct phone number now shows on the services page.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT #4 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #4</span>
+      <h3>Fix the Wrong Email on the Services Page</h3>
+    </div>
+    <div class="edit-card-body">
+      <div class="edit-meta">
+        <span><span class="label">File:</span> services.html</span>
+        <span><span class="label">Line:</span> ~343</span>
+      </div>
+      <p><strong>Problem:</strong> Footer shows <code>info@resolveptbend.com</code> which is not your real email.</p>
+
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">info@resolveptbend.com</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code">resolveptbend@gmail.com</div>
+      </div>
+
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> Correct email now shows.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT #5 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #5</span>
+      <h3>Add Full Street Address to Services Page</h3>
+    </div>
+    <div class="edit-card-body">
+      <div class="edit-meta">
+        <span><span class="label">File:</span> services.html</span>
+        <span><span class="label">Line:</span> ~330</span>
+      </div>
+      <p><strong>Problem:</strong> The services page footer only says "Bend, Oregon" with no street address.</p>
+
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">&lt;span&gt;Bend, Oregon&lt;/span&gt;</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code">&lt;span&gt;1740 NW Pence Ln Suite 5&lt;br&gt;Bend, OR 97703&lt;/span&gt;</div>
+      </div>
+
+      <div class="callout tip">
+        <span class="callout-icon">&#128161;</span> The <code>&lt;br&gt;</code> tag creates a line break so the address appears on two lines.
+      </div>
+
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> Full address now shows on the services page footer.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     EDIT #6 - SOCIAL LINKS
+     ============================================================ -->
+<div class="page page-break">
+
+  <!-- EDIT #6 -->
+  <div class="edit-card">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #6</span>
+      <h3>Fix Social Media Placeholder Links</h3>
+    </div>
+    <div class="edit-card-body">
+      <p><strong>Problem:</strong> Several pages have social icons that link to <code>#</code> (nowhere).</p>
+
+      <h4>Edit #6A: Fix Social Links on <code>services.html</code></h4>
+      <p>Three social icons (Facebook, Instagram, Google) need fixing:</p>
+
+      <p class="fw-bold text-sm">Facebook:</p>
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">&lt;a href="#" class="footer__social-link" aria-label="Facebook"&gt;</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code">&lt;a href="https://www.facebook.com/resolveptbend" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer"&gt;</div>
+      </div>
+
+      <p class="fw-bold text-sm">Instagram:</p>
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">&lt;a href="#" class="footer__social-link" aria-label="Instagram"&gt;</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code">&lt;a href="https://www.instagram.com/resolveptbend" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"&gt;</div>
+      </div>
+
+      <p class="fw-bold text-sm">Google (Option A &mdash; link to Google Business Profile, or Option B &mdash; delete the icon):</p>
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">&lt;a href="#" class="footer__social-link" aria-label="Google"&gt;</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code">&lt;a href="https://g.page/resolveptbend" class="footer__social-link" aria-label="Google Business Profile" target="_blank" rel="noopener noreferrer"&gt;</div>
+      </div>
+      <p class="text-sm text-muted">Or delete lines 359&ndash;365 entirely to remove the Google icon.</p>
+
+      <h4>Edit #6B: Fix Social Links on <code>contact.html</code></h4>
+      <p>Repeat the same Facebook and Instagram replacements for <code>contact.html</code>.</p>
+
+      <div class="callout tip">
+        <span class="callout-icon">&#128161;</span> <code>target="_blank"</code> opens links in a new tab. <code>rel="noopener noreferrer"</code> is a security best practice.
+      </div>
+
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> All social media icons now link to your real profiles.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT #7 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #7</span>
+      <h3>Connect the Contact Forms</h3>
+    </div>
+    <div class="edit-card-body">
+      <p><strong>Problem:</strong> Both contact forms do nothing when submitted &mdash; no email is sent, no data saved.</p>
+      <div class="callout info">
+        <span class="callout-icon">&#128203;</span> Your contact forms need a backend service. <strong>Complete setup instructions are in Step 2 (page 8+).</strong> Do that section next, then come back for Edit #8.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT #8 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #8</span>
+      <h3>Fix Dead "Careers" Links</h3>
+    </div>
+    <div class="edit-card-body">
+      <p><strong>Problem:</strong> Every page has "Careers" links in the nav bar and footer that go nowhere.</p>
+
+      <h4>Option A: Link to a real careers page or job posting</h4>
+      <p>In each file, replace <code>href="#"</code> on Careers links with your real URL.</p>
+
+      <h4>Option B: Remove the Careers links entirely <span class="text-muted">(recommended if not hiring)</span></h4>
+      <p>Each file uses slightly different HTML for the Careers nav link. Do these Find &amp; Replace operations:</p>
+
+      <p class="text-sm"><strong>In <code>index.html</code>:</strong> Find <code>&lt;a href="#" class="nav__link"&gt;Careers&lt;/a&gt;</code> &rarr; Replace with nothing</p>
+      <p class="text-sm"><strong>In <code>services.html</code>:</strong> Find <code>&lt;li&gt;&lt;a href="#" class="nav__link"&gt;Careers&lt;/a&gt;&lt;/li&gt;</code> &rarr; Replace with nothing</p>
+      <p class="text-sm"><strong>In <code>about.html</code>:</strong> Find <code>&lt;li role="none"&gt;&lt;a href="#" class="nav__link" role="menuitem"&gt;Careers&lt;/a&gt;&lt;/li&gt;</code> &rarr; Replace with nothing</p>
+      <p class="text-sm"><strong>In <code>contact.html</code>:</strong> Same as services.html</p>
+      <p class="text-sm"><strong>Footer (all 4 files):</strong> Find <code>&lt;a href="#" class="footer__link"&gt;Careers&lt;/a&gt;</code> &rarr; Replace with nothing</p>
+
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> No more dead Careers links.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     EDIT #9-10 - PHOTOS
+     ============================================================ -->
+<div class="page page-break">
+
+  <!-- EDIT #9 -->
+  <div class="edit-card">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #9</span>
+      <h3>Replace Team Photo Placeholders with Real Headshots</h3>
+    </div>
+    <div class="edit-card-body">
+      <div class="edit-meta">
+        <span><span class="label">File:</span> about.html</span>
+      </div>
+      <p><strong>Problem:</strong> All five team members show generic gray icons instead of real photos.</p>
+
+      <h4>Step 1: Prepare Your Photos</h4>
+      <ol class="steps-list">
+        <li>Get a headshot for each team member</li>
+        <li>Resize to approximately <strong>400 &times; 400 pixels</strong> (square)</li>
+        <li>Save as JPG, under <strong>200KB</strong> each</li>
+        <li>Name them: <code>jenny.jpg</code>, <code>kasey.jpg</code>, <code>nate.jpg</code>, <code>sarah.jpg</code>, <code>ethan.jpg</code></li>
+        <li>Place all photos in the <code>images</code> folder</li>
+      </ol>
+
+      <div class="callout tip">
+        <span class="callout-icon">&#128161;</span> Free resizing: <code>iloveimg.com/resize-image</code> &mdash; set width and height to 400.
+      </div>
+
+      <h4>Step 2: Replace the SVG Placeholders</h4>
+      <p>For each team member, use Ctrl+H to find the SVG placeholder block and replace it with an <code>&lt;img&gt;</code> tag. The guide provides exact find/replace strings for all five: <strong>Jenny McAteer</strong>, <strong>Kasey Lohman</strong>, <strong>Nate Palmer</strong>, <strong>Sarah Consiglio</strong>, and <strong>Ethan Bruno</strong>.</p>
+
+      <p>The pattern for each is:</p>
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find: (the SVG placeholder block including the person's name)</div>
+        <div class="fr-code">&lt;div class="team-card__image" style="background-color: ..."&gt;
+  &lt;svg ...&gt;...&lt;/svg&gt;
+&lt;/div&gt;</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code">&lt;div class="team-card__image"&gt;
+  &lt;img src="images/<em>name</em>.jpg" alt="<em>Full Name</em> - Physical Therapist" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"&gt;
+&lt;/div&gt;</div>
+      </div>
+
+      <div class="callout warning">
+        <span class="callout-icon">&#9888;&#65039;</span> File names are <strong>case-sensitive</strong> on some web servers. Use all lowercase: <code>jenny.jpg</code>, not <code>Jenny.jpg</code>.
+      </div>
+
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> All five team members now show real headshot photos.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT #10 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #10</span>
+      <h3>Replace Clinic Photo Placeholders</h3>
+    </div>
+    <div class="edit-card-body">
+      <div class="edit-meta">
+        <span><span class="label">Files:</span> index.html &amp; about.html</span>
+      </div>
+      <p><strong>Problem:</strong> Both pages have a gray placeholder where a clinic photo should appear.</p>
+
+      <h4>Prepare &amp; Replace:</h4>
+      <ol class="steps-list">
+        <li>Get a good photo of your clinic &mdash; resize to ~<strong>800 &times; 450 px</strong></li>
+        <li>Save as <code>clinic.jpg</code> in the <code>images</code> folder</li>
+        <li>In each file, find the gray placeholder <code>&lt;div&gt;</code> with SVG and replace with:<br>
+          <code>&lt;img src="images/clinic.jpg" alt="Resolve Physical Therapy clinic in Bend, Oregon"&gt;</code></li>
+      </ol>
+
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> Real clinic photos appear on home and about pages.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     EDIT #11-12 + CHECKPOINT
+     ============================================================ -->
+<div class="page page-break">
+
+  <!-- EDIT #11 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #11</span>
+      <h3>Fix the Google Maps Embed</h3>
+    </div>
+    <div class="edit-card-body">
+      <div class="edit-meta">
+        <span><span class="label">File:</span> contact.html</span>
+        <span><span class="label">Lines:</span> ~204&ndash;210</span>
+      </div>
+      <p><strong>Problem:</strong> The map shows a generic/approximate location using placeholder coordinates.</p>
+
+      <h4>Get your real embed URL:</h4>
+      <ol class="steps-list">
+        <li>Go to <code>google.com/maps</code> and search for your business</li>
+        <li>Click <strong>Share</strong> &rarr; <strong>Embed a map</strong></li>
+        <li>Click <strong>COPY HTML</strong></li>
+        <li>From the copied code, extract just the URL inside <code>src="..."</code></li>
+      </ol>
+
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.5!2d-121.33!3d44.06...</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code"><em>YOUR REAL GOOGLE MAPS EMBED URL</em></div>
+      </div>
+
+      <div class="callout warning">
+        <span class="callout-icon">&#9888;&#65039;</span> The URL should start with <code>https://www.google.com/maps/embed?pb=</code> &mdash; if it starts with <code>&lt;iframe</code> you copied too much.
+      </div>
+
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> Your exact location now shows on the contact page.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT #12 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">EDIT #12</span>
+      <h3>Fix the "Download Intake Form" Link</h3>
+    </div>
+    <div class="edit-card-body">
+      <div class="edit-meta">
+        <span><span class="label">File:</span> contact.html</span>
+        <span><span class="label">Line:</span> ~265</span>
+      </div>
+      <p><strong>Problem:</strong> The "Download Intake Form" button links to <code>#</code> and does nothing.</p>
+
+      <p><strong>If using a PDF file:</strong> Save your intake form as <code>intake-form.pdf</code> in your website folder, then:</p>
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">&lt;a href="#" class="btn btn--outline btn--small" style="margin-top: var(--space-lg);"&gt;</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code">&lt;a href="intake-form.pdf" class="btn btn--outline btn--small" style="margin-top: var(--space-lg);" download&gt;</div>
+      </div>
+
+      <p><strong>If using an online link</strong> (e.g., from Prompt EMR): replace <code>href="#"</code> with your real URL and add <code>target="_blank"</code>.</p>
+
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> The intake form button now works.
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKPOINT -->
+  <div class="checkpoint">
+    <h3>&#127881; Checkpoint: Critical Edits Complete!</h3>
+    <p>If you've completed Edits #1&ndash;#12, your website is fully functional. The edits below are polish &mdash; they make your site more professional but aren't required. Take a break if you need one!</p>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     NICE-TO-HAVE EDITS (#13-16)
+     ============================================================ -->
+<div class="page page-break">
+
+  <h2>Nice-to-Have Fixes</h2>
+  <p class="text-muted">Not urgent, but they make your website more polished and professional.</p>
+
+  <!-- EDIT #13 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge nice">EDIT #13</span>
+      <h3>Add a Favicon (Browser Tab Icon)</h3>
+    </div>
+    <div class="edit-card-body">
+      <ol class="steps-list">
+        <li>Go to <code>favicon.io</code> &mdash; upload your logo or create a text-based "R" icon</li>
+        <li>Download and place <code>favicon.ico</code> in your <code>images</code> folder</li>
+        <li>In all 4 HTML files, add this line before the Google Fonts <code>&lt;link&gt;</code>:<br>
+          <code>&lt;link rel="icon" href="images/favicon.ico" type="image/x-icon"&gt;</code></li>
+      </ol>
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> Your icon appears in browser tabs.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT #14 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge nice">EDIT #14</span>
+      <h3>Fix Privacy Policy Links</h3>
+    </div>
+    <div class="edit-card-body">
+      <p><strong>Problem:</strong> Privacy Policy links in <code>about.html</code> and <code>contact.html</code> go nowhere.</p>
+      <p><strong>Option A:</strong> Use <code>freeprivacypolicy.com</code> to generate a hosted policy, then replace <code>href="#"</code> with the URL.</p>
+      <p><strong>Option B:</strong> Remove the links entirely (replace the entire link tag with nothing).</p>
+      <div class="callout success">
+        <span class="callout-icon">&#9989;</span> <span class="callout-title">Done!</span> Privacy links are now functional or removed.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT #15 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge nice">EDIT #15</span>
+      <h3>Update the Review Count</h3>
+    </div>
+    <div class="edit-card-body">
+      <div class="edit-meta">
+        <span><span class="label">File:</span> index.html</span>
+      </div>
+      <p>The site says "201+ Five-Star Reviews." Update to your current count using Find &amp; Replace:</p>
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">201+</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code"><em>250+</em> (your current count)</div>
+      </div>
+      <p class="text-sm">Also update: <code>"reviewCount": "201"</code> &rarr; <code>"reviewCount": "250"</code></p>
+      <div class="callout tip">
+        <span class="callout-icon">&#128161;</span> Set a quarterly calendar reminder to update this number.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT #16 -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge nice">EDIT #16</span>
+      <h3>Add OG Images for Social Media Sharing</h3>
+    </div>
+    <div class="edit-card-body">
+      <p>When someone shares your site on Facebook or LinkedIn, a preview image appears. Create a <strong>1200 &times; 630 px</strong> image saved as <code>og-image.jpg</code> in your <code>images</code> folder, then add an OG meta tag in the <code>&lt;head&gt;</code> of each page:</p>
+      <div class="code-block">&lt;meta property="og:image" content="https://resolveptbend.com/images/og-image.jpg"&gt;</div>
+      <div class="callout tip">
+        <span class="callout-icon">&#128161;</span> Test OG images at <code>opengraph.xyz</code> after your site is live.
+      </div>
+    </div>
+  </div>
+
+  <!-- EDITING MASTER CHECKLIST -->
+  <h2>Editing Master Checklist</h2>
+  <h4>Critical Fixes</h4>
+  <ul class="checklist critical">
+    <li><strong>Edit #1</strong> &mdash; Hero image downloaded locally</li>
+    <li><strong>Edit #2</strong> &mdash; YouTube video ID replaced</li>
+    <li><strong>Edit #3</strong> &mdash; Phone number fixed in services.html</li>
+    <li><strong>Edit #4</strong> &mdash; Email fixed in services.html</li>
+    <li><strong>Edit #5</strong> &mdash; Street address added to services.html</li>
+    <li><strong>Edit #6</strong> &mdash; Social media links fixed</li>
+    <li><strong>Edit #7</strong> &mdash; Contact forms connected (Step 2)</li>
+    <li><strong>Edit #8</strong> &mdash; Careers links fixed or removed</li>
+    <li><strong>Edit #9</strong> &mdash; Team photos added</li>
+    <li><strong>Edit #10</strong> &mdash; Clinic photo placeholders replaced</li>
+    <li><strong>Edit #11</strong> &mdash; Google Maps embed updated</li>
+    <li><strong>Edit #12</strong> &mdash; Intake form link fixed</li>
+  </ul>
+  <h4>Nice-to-Have Fixes</h4>
+  <ul class="checklist nice">
+    <li><strong>Edit #13</strong> &mdash; Favicon added</li>
+    <li><strong>Edit #14</strong> &mdash; Privacy Policy links fixed</li>
+    <li><strong>Edit #15</strong> &mdash; Review count updated</li>
+    <li><strong>Edit #16</strong> &mdash; OG images added</li>
+  </ul>
+
+</div>
+
+
+<!-- ============================================================
+     STEP 2: FORMS
+     ============================================================ -->
+<div class="page page-break">
+
+  <div class="step-header">
+    <div class="step-number">2</div>
+    <div class="step-header-content">
+      <h1>Making Your Forms Work</h1>
+      <p>Connect your contact forms so patient inquiries reach your inbox</p>
+    </div>
+  </div>
+
+  <p>Your website has two forms on the Contact page &mdash; but they don't actually send anywhere yet. This section connects them so submissions arrive in your inbox like regular emails.</p>
+
+  <h3>Your Two Forms in <code>contact.html</code></h3>
+  <ol>
+    <li><strong>Contact Form</strong> (line ~88) &mdash; Name, Email, Phone, Service Interest, Message</li>
+    <li><strong>Booking Form</strong> (line ~314) &mdash; Name, Email, Phone, Date, Time, Notes</li>
+  </ol>
+
+  <!-- Web3Forms -->
+  <div class="option-card recommended no-break">
+    <div class="option-header">
+      <div class="option-letter">A</div>
+      <h3>Web3Forms <span class="rec-badge">Recommended</span></h3>
+    </div>
+    <div class="option-meta">
+      <div class="meta-item"><span class="meta-label">Free Tier</span><span class="meta-value">250/month</span></div>
+      <div class="meta-item"><span class="meta-label">Setup Time</span><span class="meta-value">~5 min</span></div>
+      <div class="meta-item"><span class="meta-label">Cost</span><span class="meta-value">Free</span></div>
+      <div class="meta-item"><span class="meta-label">Account Needed?</span><span class="meta-value">No (just email)</span></div>
+    </div>
+
+    <h4>Setup Steps:</h4>
+    <ol class="steps-list">
+      <li>Go to <strong>web3forms.com</strong>, enter <code>resolveptbend@gmail.com</code>, get your access key via email</li>
+      <li>In <code>contact.html</code>, change <code>action="#"</code> to <code>action="https://api.web3forms.com/submit"</code> on both forms</li>
+      <li>Add two hidden inputs right after each <code>&lt;form&gt;</code> tag:
+        <div class="code-block">&lt;input type="hidden" name="access_key" value="YOUR-ACCESS-KEY-HERE"&gt;
+&lt;input type="hidden" name="subject" value="New Contact Form - Resolve PT"&gt;</div>
+      </li>
+      <li>Use different subject lines for each form so you can tell them apart in your inbox</li>
+    </ol>
+  </div>
+
+  <!-- JS Fix -->
+  <div class="edit-card no-break">
+    <div class="edit-card-header">
+      <span class="edit-badge critical">REQUIRED</span>
+      <h3>Fix the JavaScript That Blocks Form Submission</h3>
+    </div>
+    <div class="edit-card-body">
+      <div class="callout danger">
+        <span class="callout-icon">&#9888;&#65039;</span>
+        <span class="callout-title">Most Technical Edit</span> &mdash; Take your time. If you get stuck, it's okay to ask a tech-savvy friend for help.
+      </div>
+
+      <div class="edit-meta">
+        <span><span class="label">File:</span> js/main.js</span>
+        <span><span class="label">Lines:</span> ~345&ndash;352</span>
+      </div>
+
+      <p>The JavaScript currently blocks ALL form submissions &mdash; even valid ones. Both the "error" and "success" branches call <code>e.preventDefault()</code>, which stops the form from actually sending.</p>
+
+      <div class="find-replace">
+        <div class="fr-label find-label">&#128269; Find what:</div>
+        <div class="fr-code">        } else {
+          e.preventDefault();
+          alert('Thank you! Your message has been submitted successfully. We will get back to you shortly.');
+          form.reset();
+        }</div>
+        <div class="fr-label replace-label">&#8594; Replace with:</div>
+        <div class="fr-code replace-code">        }
+        // If valid, the form submits normally to Web3Forms</div>
+      </div>
+
+      <div class="callout warning">
+        <span class="callout-icon">&#9888;&#65039;</span> Only change the lines above. If you accidentally delete a curly brace <code>}</code>, the entire JavaScript file will break. Press <strong>Ctrl+Z</strong> to undo if anything goes wrong.
+      </div>
+    </div>
+  </div>
+
+  <!-- Alternatives -->
+  <h3>Alternative Options</h3>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Web3Forms</th>
+        <th>Formspree</th>
+        <th>Netlify Forms</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Free submissions/month</td>
+        <td><strong>250</strong></td>
+        <td>50</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>Account required?</td>
+        <td>No (just email)</td>
+        <td>Yes</td>
+        <td>Yes (Netlify hosting)</td>
+      </tr>
+      <tr>
+        <td>Submission dashboard</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Setup difficulty</td>
+        <td><strong>Easiest</strong></td>
+        <td>Easy</td>
+        <td>Easiest (if on Netlify)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Testing -->
+  <h3>Testing Your Forms</h3>
+  <ol class="steps-list">
+    <li>Open your website and go to the Contact page</li>
+    <li>Fill out the contact form with your own info and click <strong>Send Message</strong></li>
+    <li>Check your Gmail inbox (and spam folder) &mdash; you should receive it within 1&ndash;2 minutes</li>
+    <li>Repeat with the booking form</li>
+    <li>Test error handling: leave a required field blank &mdash; you should see the validation error</li>
+  </ol>
+
+  <h3>Forms Checklist</h3>
+  <ul class="checklist">
+    <li>Signed up for a form service</li>
+    <li>Updated <code>action="#"</code> on both forms</li>
+    <li>Added hidden input fields (access key, subject)</li>
+    <li>Fixed JavaScript in <code>js/main.js</code></li>
+    <li>Tested contact form &mdash; received email</li>
+    <li>Tested booking form &mdash; received email</li>
+    <li>Tested validation &mdash; errors still work</li>
+  </ul>
+
+</div>
+
+
+<!-- ============================================================
+     STEP 3: HOSTING
+     ============================================================ -->
+<div class="page page-break">
+
+  <div class="step-header">
+    <div class="step-number">3</div>
+    <div class="step-header-content">
+      <h1>Choose Your Hosting &amp; Go Live</h1>
+      <p>Upload your site to the internet &mdash; pick one provider</p>
+    </div>
+  </div>
+
+  <p>No wrong answer here. All three options get your site live and looking great. Pick the one that feels right &mdash; you can always switch later.</p>
+
+  <!-- Netlify -->
+  <div class="option-card recommended">
+    <div class="option-header">
+      <div class="option-letter">A</div>
+      <h3>Netlify <span class="rec-badge">Recommended for Beginners</span></h3>
+    </div>
+    <div class="option-meta">
+      <div class="meta-item"><span class="meta-label">Cost</span><span class="meta-value">Free Forever</span></div>
+      <div class="meta-item"><span class="meta-label">SSL</span><span class="meta-value">Free Auto HTTPS</span></div>
+      <div class="meta-item"><span class="meta-label">Best For</span><span class="meta-value">First-timers</span></div>
+    </div>
+
+    <p><strong>Why Netlify?</strong> You drag a folder onto a webpage and your site is live. Built-in form handling too.</p>
+
+    <h4>Deploy Your Site:</h4>
+    <ol class="steps-list">
+      <li>Go to <code>netlify.com</code> and create a free account</li>
+      <li>On your dashboard, find the dotted-line drag-and-drop area</li>
+      <li>Open File Explorer, find your website folder</li>
+      <li><strong>Drag the entire folder</strong> onto the dotted-line box in your browser</li>
+      <li>Your site is live! Netlify gives you a URL like <code>random-words.netlify.app</code></li>
+    </ol>
+
+    <h4>Connect Your Domain:</h4>
+    <ol class="steps-list">
+      <li>In Netlify &rarr; <strong>Site Settings</strong> &rarr; <strong>Domain Management</strong> &rarr; <strong>Add custom domain</strong></li>
+      <li>Type <code>resolveptbend.com</code> and verify</li>
+      <li>At your domain registrar, add a <strong>CNAME record</strong>: Host = <code>www</code>, Value = your Netlify URL</li>
+      <li>Wait 5 min to 48 hours for DNS to update (usually under 1 hour)</li>
+      <li>SSL activates automatically once the domain is connected</li>
+    </ol>
+  </div>
+
+  <!-- Cloudflare -->
+  <div class="option-card no-break">
+    <div class="option-header">
+      <div class="option-letter">B</div>
+      <h3>Cloudflare Pages &mdash; Best Free Performance</h3>
+    </div>
+    <div class="option-meta">
+      <div class="meta-item"><span class="meta-label">Cost</span><span class="meta-value">Free (unlimited)</span></div>
+      <div class="meta-item"><span class="meta-label">SSL</span><span class="meta-value">Free</span></div>
+      <div class="meta-item"><span class="meta-label">Best For</span><span class="meta-value">Fastest loading</span></div>
+    </div>
+
+    <p><strong>Why Cloudflare?</strong> One of the world's largest networks. Your site loads from servers near every visitor.</p>
+
+    <ol class="steps-list">
+      <li>Go to <code>dash.cloudflare.com</code> and create a free account</li>
+      <li>Click <strong>Workers &amp; Pages</strong> &rarr; <strong>Create</strong> &rarr; <strong>Pages</strong> tab &rarr; <strong>Upload assets</strong></li>
+      <li>Name your project (e.g., <code>resolvept</code>)</li>
+      <li>Drag your website folder in and click <strong>Deploy site</strong></li>
+    </ol>
+    <p class="text-sm text-muted">Note: Cloudflare Pages does not have built-in forms &mdash; use Web3Forms or Formspree (Step 2).</p>
+  </div>
+
+  <!-- Namecheap -->
+  <div class="option-card no-break">
+    <div class="option-header">
+      <div class="option-letter">C</div>
+      <h3>Namecheap &mdash; Best if You Want Email Hosting Too</h3>
+    </div>
+    <div class="option-meta">
+      <div class="meta-item"><span class="meta-label">Cost</span><span class="meta-value">~$1.48/mo (yr 1)</span></div>
+      <div class="meta-item"><span class="meta-label">SSL</span><span class="meta-value">Free AutoSSL</span></div>
+      <div class="meta-item"><span class="meta-label">Best For</span><span class="meta-value">Professional email</span></div>
+    </div>
+
+    <p><strong>Why Namecheap?</strong> Get <code>jenny@resolveptbend.com</code> email included with hosting.</p>
+
+    <ol class="steps-list">
+      <li>Get the <strong>Stellar</strong> shared hosting plan at <code>namecheap.com</code></li>
+      <li>Log into dashboard &rarr; <strong>Go to cPanel</strong> &rarr; <strong>File Manager</strong></li>
+      <li>Navigate to <code>public_html</code> &rarr; Upload all your website files</li>
+      <li>Your site is live at your domain</li>
+    </ol>
+    <div class="callout tip">
+      <span class="callout-icon">&#128161;</span> Zip your website folder, upload the zip, then use cPanel's <strong>Extract</strong> button for easier uploading.
+    </div>
+  </div>
+
+  <!-- Domain -->
+  <h3>Domain Name Options</h3>
+  <table class="comparison-table">
+    <thead><tr><th>Registrar</th><th>Annual Cost</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Cloudflare Registrar</td><td><strong>~$10.46/yr</strong></td><td>Cheapest &mdash; no markup</td></tr>
+      <tr><td>Porkbun</td><td>~$11.08/yr</td><td>Clean interface, good support</td></tr>
+      <tr><td>Namecheap</td><td>~$13.48/yr</td><td>Convenient if hosting there too</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout info">
+    <span class="callout-icon">&#128161;</span> <strong>Don't panic if your site doesn't appear immediately</strong> after changing DNS settings. The internet needs time to spread the word. Go get a coffee, check again in 30 minutes.
+  </div>
+
+  <h3>Hosting Checklist</h3>
+  <ul class="checklist">
+    <li>Signed up for a hosting provider</li>
+    <li>Uploaded all website files</li>
+    <li>Site loads at the temporary URL</li>
+    <li>Clicked through all 4 pages to confirm they work</li>
+    <li>Connected custom domain (<code>resolveptbend.com</code>)</li>
+    <li>SSL/HTTPS is active (padlock icon visible)</li>
+  </ul>
+
+</div>
+
+
+<!-- ============================================================
+     STEP 4: PRIVACY & LEGAL
+     ============================================================ -->
+<div class="page page-break">
+
+  <div class="step-header">
+    <div class="step-number">4</div>
+    <div class="step-header-content">
+      <h1>Privacy, Legal &amp; Compliance</h1>
+      <p>Handle basic privacy, accessibility, and Google Business items</p>
+    </div>
+  </div>
+
+  <!-- HIPAA -->
+  <h2>4A: Do You Need HIPAA Compliance?</h2>
+  <div class="callout success">
+    <span class="callout-icon">&#9989;</span>
+    <span class="callout-title">Short answer: No, not for this website.</span><br>
+    Your contact forms collect <strong>name, email, phone, and a message</strong> &mdash; none of which is Protected Health Information (PHI). You're in the clear.
+  </div>
+
+  <div class="callout warning">
+    <span class="callout-icon">&#9888;&#65039;</span>
+    <span class="callout-title">One important warning:</span> Do NOT add form fields asking visitors to describe specific health conditions, injuries, or diagnoses. That could cross the line into collecting PHI.
+  </div>
+
+  <p>If you ever want <strong>online intake forms</strong> collecting health history, use a HIPAA-compliant platform:</p>
+  <ul>
+    <li><strong>Jane App</strong> (janeapp.com) &mdash; popular with PT clinics</li>
+    <li><strong>IntakeQ</strong> (intakeq.com) &mdash; specializes in online intake</li>
+    <li><strong>Prompt EMR's patient portal</strong> &mdash; check if it supports this</li>
+  </ul>
+
+  <!-- Privacy Policy -->
+  <h2>4B: Privacy Policy</h2>
+  <p>Recommended but not legally required for a small clinic site. Builds trust with visitors.</p>
+
+  <h4>What to include:</h4>
+  <ol class="steps-list">
+    <li>What information you collect (names, emails, phones from forms)</li>
+    <li>How you use it (respond to inquiries, schedule appointments)</li>
+    <li>Who you share it with (nobody except the form delivery service)</li>
+    <li>Third-party services (Google Fonts &mdash; Google receives visitor IP addresses)</li>
+    <li>Contact info for privacy questions</li>
+  </ol>
+
+  <p>Create a <code>privacy-policy.html</code> page using the template provided in the full guide. Then update all footer "Privacy Policy" links from <code>href="#"</code> to <code>href="privacy-policy.html"</code>.</p>
+
+  <!-- Cookies -->
+  <h2>4C: Do You Need a Cookie Banner?</h2>
+  <div class="callout success">
+    <span class="callout-icon">&#9989;</span>
+    <span class="callout-title">No, you do not.</span> Your website uses no cookies, no analytics, no tracking scripts, and no advertising pixels. Cookie consent banners are only required when your site places cookies on visitors' devices.
+  </div>
+
+  <p class="text-sm text-muted">If you add Google Analytics or Facebook Pixel later, you WILL need a banner at that point.</p>
+
+  <!-- Accessibility -->
+  <h2>4D: ADA/WCAG Accessibility</h2>
+  <p><strong>Federal deadlines:</strong> 15+ employees by <strong>May 2026</strong>; smaller practices by <strong>May 2027</strong>.</p>
+
+  <div class="callout success">
+    <span class="callout-icon">&#9989;</span>
+    <span class="callout-title">Your website was built with accessibility as a priority.</span> Already in place: semantic HTML, skip links, form labels, ARIA attributes, keyboard navigation, high contrast text.
+  </div>
+
+  <h4>Rules for when you edit:</h4>
+  <ul>
+    <li>Always add descriptive <code>alt</code> text to images</li>
+    <li>Use headings in order (h1 &rarr; h2 &rarr; h3, never skip)</li>
+    <li>Use descriptive link text (not "Click here")</li>
+    <li>Check color contrast at <code>webaim.org/resources/contrastchecker/</code></li>
+  </ul>
+
+  <!-- Google Business -->
+  <h2>4E: Google Business Profile</h2>
+  <ol class="steps-list">
+    <li>Go to <code>business.google.com</code> and sign in</li>
+    <li>Find your Resolve Physical Therapy listing</li>
+    <li>Click <strong>Edit profile</strong> &rarr; update the <strong>Website</strong> field to <code>https://resolveptbend.com</code></li>
+    <li>While there, verify: business name, address, phone, hours, categories, and photos</li>
+  </ol>
+
+  <h3>Legal &amp; Privacy Checklist</h3>
+  <ul class="checklist">
+    <li>Confirmed: forms do NOT collect health information</li>
+    <li>Created <code>privacy-policy.html</code> page</li>
+    <li>Updated Privacy Policy footer links in all 4 HTML files</li>
+    <li>Verified: no cookie banner needed</li>
+    <li>All images have descriptive <code>alt</code> text</li>
+    <li>Headings used in proper order</li>
+    <li>Google Business Profile updated with new website URL</li>
+  </ul>
+
+</div>
+
+
+<!-- ============================================================
+     UPDATING YOUR SITE + CLOSING
+     ============================================================ -->
+<div class="page page-break">
+
+  <h1>Updating Your Site After Future Edits</h1>
+  <p>After your site is live, you'll occasionally need to make changes. Here's how to re-upload for each provider:</p>
+
+  <div class="option-card no-break">
+    <h4>Netlify</h4>
+    <ol class="steps-list">
+      <li>Log in to <code>app.netlify.com</code> &rarr; click your site &rarr; <strong>Deploys</strong> tab</li>
+      <li>Drag your updated website folder onto the deploy area</li>
+      <li>Changes are live within seconds</li>
+    </ol>
+  </div>
+
+  <div class="option-card no-break">
+    <h4>Cloudflare Pages</h4>
+    <ol class="steps-list">
+      <li>Log in to <code>dash.cloudflare.com</code> &rarr; <strong>Workers &amp; Pages</strong> &rarr; your project</li>
+      <li>Click <strong>Create deployment</strong> &rarr; <strong>Upload assets</strong></li>
+      <li>Drag your updated folder in &rarr; click <strong>Deploy site</strong></li>
+    </ol>
+    <div class="callout tip">
+      <span class="callout-icon">&#128161;</span> Cloudflare keeps deployment history. You can roll back if something goes wrong.
+    </div>
+  </div>
+
+  <div class="option-card no-break">
+    <h4>Namecheap (cPanel)</h4>
+    <ol class="steps-list">
+      <li>Log in &rarr; <strong>Go to cPanel</strong> &rarr; <strong>File Manager</strong> &rarr; <code>public_html</code></li>
+      <li>Upload only the files you changed</li>
+      <li>Overwrite when prompted &mdash; changes are live immediately</li>
+    </ol>
+  </div>
+
+  <h3>General Tips for Updates</h3>
+  <ul>
+    <li><strong>Always test locally first.</strong> Open your edited HTML files in your browser before uploading.</li>
+    <li><strong>Keep a backup.</strong> Copy your website folder before major changes (e.g., <code>Website Backup - Feb 2026</code>).</li>
+    <li><strong>Clear your browser cache.</strong> Press <strong>Ctrl+Shift+R</strong> if changes don't appear after re-uploading.</li>
+  </ul>
+
+  <hr class="section-divider">
+
+  <div style="background: linear-gradient(135deg, var(--brand-primary-light), #fff); border: 2px solid var(--brand-primary); border-radius: var(--radius); padding: 1.5rem; text-align: center; margin-top: 2rem;">
+    <h2 style="border: none; margin-top: 0; color: var(--brand-primary); font-family: 'Playfair Display', serif; font-size: 18pt;">You Did It!</h2>
+    <p style="font-size: 11pt; max-width: 500px; margin: 0.5rem auto; color: var(--brand-dark);">
+      Your website is complete and live on the internet. Your forms deliver messages to your inbox, your privacy bases are covered, and your site is built to be accessible.
+    </p>
+    <p style="font-size: 10pt; color: var(--brand-text-light); margin-top: 0.8rem;">
+      Every potential patient who reaches out through your website is a real person looking for help.<br>Making sure their message reaches you is worth every minute of this setup.
+    </p>
+  </div>
+
+  <div class="guide-footer">
+    <p><strong>Resolve Physical Therapy</strong> &mdash; 1740 NW Pence Ln Suite 5, Bend, OR 97703</p>
+    <p>(541) 306-1099 &nbsp;|&nbsp; resolveptbend@gmail.com</p>
+    <p style="margin-top: 0.5rem;">Website Implementation Guide &mdash; Prepared February 2026</p>
+  </div>
+
+</div>
+
+</body>
+</html>
