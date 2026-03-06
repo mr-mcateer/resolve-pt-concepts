@@ -183,11 +183,50 @@
             color: #FFFFFF;
         }
 
+        .badge-v3 {
+            background: #283B45;
+            color: #8CC6EC;
+        }
+
         .card-featured {
             border: 2px solid #E07C4F;
             background: linear-gradient(135deg, #FFFFFF 0%, #FFF8F5 100%);
             position: relative;
             grid-column: 1 / -1;
+        }
+
+        .card-v3 {
+            border: 2px solid #283B45;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F0F8FF 100%);
+            position: relative;
+            grid-column: 1 / -1;
+        }
+
+        .card-v3::before {
+            content: 'LATEST — FULL SITE';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #283B45;
+            color: #8CC6EC;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            padding: 3px 10px;
+            border-radius: 4px;
+        }
+
+        .card-v3 .card-link {
+            color: #283B45;
+        }
+
+        .card-v3:hover {
+            border-color: #3D7B5F;
+            box-shadow: 0 12px 24px -3px rgba(40, 59, 69, 0.15);
+        }
+
+        .card-v3:hover .card-link {
+            color: #3D7B5F;
         }
 
         .card-featured::before {
@@ -216,6 +255,43 @@
             color: #c5623a;
         }
 
+        .page-count {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #283B45;
+            background: #E8F4FD;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 0.75rem;
+        }
+
+        .v3-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .v3-links a {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #283B45;
+            text-decoration: none;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            background: #F3F4F6;
+            transition: background 0.15s;
+        }
+
+        .v3-links a:hover {
+            background: #E8F4FD;
+        }
+
         .features-list {
             display: flex;
             flex-wrap: wrap;
@@ -242,11 +318,54 @@
                 Resolve Physical Therapy.</p>
         </header>
 
-        <!-- FINAL DESIGN — Recommended -->
+        <!-- V3 — FULL SITE REDESIGN -->
+        <div class="grid" style="margin-bottom: 2rem;">
+            <a href="v3/index.html" class="card card-v3">
+                <span class="card-badge badge-v3">V3 — Full Site</span>
+                <h2>Complete 32-Page Website Redesign</h2>
+                <div class="page-count">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    32 pages
+                </div>
+                <p>Full production website built on a Pillar + Cluster SEO architecture optimized for 2026 AI Overviews and Google E-E-A-T. Five deep pillar pages (2,000-4,000 words each), individual DPT bio pages with Physician schema, 9 medically-reviewed blog posts, new EDS service page featuring Sarah Consiglio, and Jenny McAteer as founder across every page in Schema.org.</p>
+                <div class="features-list">
+                    <span class="feature-tag">32 Pages</span>
+                    <span class="feature-tag">Pillar + Cluster SEO</span>
+                    <span class="feature-tag">E-E-A-T Badges</span>
+                    <span class="feature-tag">EDS Service (New)</span>
+                    <span class="feature-tag">4 DPT Bio Pages</span>
+                    <span class="feature-tag">9 Blog Posts</span>
+                    <span class="feature-tag">Schema.org @graph</span>
+                    <span class="feature-tag">Dark Mode</span>
+                    <span class="feature-tag">WCAG AA</span>
+                    <span class="feature-tag">Mobile-First</span>
+                </div>
+                <div class="card-link">View Full Site Homepage <span aria-hidden="true">&rarr;</span></div>
+            </a>
+        </div>
+
+        <!-- Quick links to key V3 pages -->
+        <div class="v3-links" style="margin-bottom: 2rem; justify-content: center;">
+            <a href="v3/index.html">Homepage</a>
+            <a href="v3/about.html">About & Team</a>
+            <a href="v3/services/index.html">Services Hub</a>
+            <a href="v3/services/ehlers-danlos-syndrome.html">EDS (New)</a>
+            <a href="v3/services/running-sports-rehab.html">Running Rehab</a>
+            <a href="v3/team/jenny-mcateer.html">Jenny McAteer</a>
+            <a href="v3/team/sarah-consiglio.html">Sarah Consiglio</a>
+            <a href="v3/blog/index.html">Blog</a>
+            <a href="v3/contact.html">Contact</a>
+        </div>
+
+        <div class="section-divider">
+            <span>Previous Iterations</span>
+        </div>
+
+        <!-- FINAL DESIGN (V2.5) -->
         <div class="grid" style="margin-bottom: 2rem;">
             <a href="concepts/resolve-pt-final.html" class="card card-featured">
-                <span class="card-badge badge-final">Final Design</span>
-                <h2>The Definitive Resolve PT Website</h2>
+                <span class="card-badge badge-final">Final Design (Single Page)</span>
+                <h2>The Definitive Landing Page</h2>
                 <p>Market-researched, data-driven hybrid combining the best of all three concepts. Active Performance energy + PNW Warmth authenticity + Clinical Trust depth. Real team photos, full bios, dark mode, Ken Burns hero, parallax, animated stats, FAQ schema, Shockwave Therapy, and 16 production-quality sections.</p>
                 <div class="features-list">
                     <span class="feature-tag">Dark Mode</span>
