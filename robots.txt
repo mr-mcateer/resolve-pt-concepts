@@ -1,0 +1,21 @@
+# Resolve Physical Therapy — Website Concepts
+# https://promptaisolutions.com/resolve-pt-concepts/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://promptaisolutions.com/resolve-pt-concepts/sitemap.xml
+
+# AI Crawlers — Allow for SEO visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
