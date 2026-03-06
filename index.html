@@ -2,302 +2,179 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resolve Physical Therapy | Bend, OR</title>
-  <meta name="description"
-    content="Resolve Physical Therapy provides true 1:1 physical therapy in Bend, Oregon. Specialized in running rehab, post-op, and chronic pain.">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolve Physical Therapy | Brand Concept Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FAFAFA;
+            --text: #111827;
+            --card-bg: #FFFFFF;
+            --border: #E5E7EB;
+            --primary: #3B82F6;
+            --hover: #2563EB;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            padding: 4rem var(--space-md);
+            margin: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        p.lead {
+            color: #4B5563;
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.1);
+            border-color: #D1D5DB;
+        }
+
+        .card-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+            align-self: flex-start;
+        }
+
+        .badge-warm {
+            background: #FDE68A;
+            color: #92400E;
+        }
+
+        .badge-perf {
+            background: #D1FAE5;
+            color: #065F46;
+        }
+
+        .badge-clin {
+            background: #DBEAFE;
+            color: #1E40AF;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #6B7280;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            color: var(--primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .card:hover .card-link {
+            color: var(--hover);
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
     <div class="container">
-      <div class="navbar-brand">
-        <a href="/">Resolve</a>
-      </div>
-      <nav class="nav-links" aria-label="Main Navigation">
-        <a href="#services">Services</a>
-        <a href="#team">Our Team</a>
-        <a href="#info">Patient Info</a>
-        <a href="#contact">Contact</a>
-        <a href="tel:5413061099" class="phone-link">(541) 306-1099</a>
-        <a href="#contact" class="btn btn-primary">Schedule Appointment</a>
-      </nav>
+        <header>
+            <h1>Brand Concepts Review</h1>
+            <p class="lead">Select a visual identity iteration below to preview the live, high-fidelity landing page for
+                Resolve Physical Therapy.</p>
+        </header>
+
+        <div class="grid">
+            <!-- Option 1: PNW Warmth -->
+            <a href="pnw-warmth.html" class="card">
+                <span class="card-badge badge-warm">Option 1</span>
+                <h2>Pacific Northwest Warmth</h2>
+                <p>Organic, personal, and rooted in Bend. Warm linen tones, desert sage, and humanist typography. Feels
+                    like a quiet, intimate clinic where everyone knows your name.</p>
+                <div class="card-link">View Prototype <span aria-hidden="true">&rarr;</span></div>
+            </a>
+
+            <!-- Option 2: Active Performance -->
+            <a href="active-performance.html" class="card">
+                <span class="card-badge badge-perf">Option 2</span>
+                <h2>Active Performance</h2>
+                <p>Athletic, highly-accessible (WCAG AAA), and evidence-based. Dark mode/light mode enabled. Targets
+                    serious athletes, runners, and skiers pushing for results.</p>
+                <div class="card-link">View Prototype <span aria-hidden="true">&rarr;</span></div>
+            </a>
+
+            <!-- Option 3: Clinical Trust -->
+            <a href="clinical-trust.html" class="card">
+                <span class="card-badge badge-clin">Option 3</span>
+                <h2>Clinical Trust</h2>
+                <p>Refined, highly credible, and physician-referral ready. Mayo Clinic aesthetic utilizing medical teal,
+                    crisp white spacing, and authoritative serif typography.</p>
+                <div class="card-link">View Prototype <span aria-hidden="true">&rarr;</span></div>
+            </a>
+        </div>
     </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container">
-      <div class="hero-overlay">
-        <h1>One therapist. One hour. One plan built around you.</h1>
-        <p>Bend's home for one-on-one physical therapy — from the trail back to the trail.</p>
-        <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary">Schedule Your Visit</a>
-          <a href="#contact" class="btn btn-secondary">Free 20-Min Consultation</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- What Makes Us Different -->
-  <section class="section diff-section">
-    <div class="container">
-      <div class="diff-grid">
-        <!-- Card 1 -->
-        <div class="diff-card">
-          <div class="diff-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M12 21a9 9 0 0 1-9-9 9 9 0 0 1 18 0"></path>
-              <path d="M12 7v5l3 3"></path>
-            </svg>
-          </div>
-          <h3>True 1:1 Care</h3>
-          <p>Your therapist. Start to finish. Every visit. No aides. No handoffs.</p>
-        </div>
-        <!-- Card 2 -->
-        <div class="diff-card">
-          <div class="diff-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </div>
-          <h3>Find the Source</h3>
-          <p>We don't chase symptoms. We find why it's happening — so it stops happening.</p>
-        </div>
-        <!-- Card 3 -->
-        <div class="diff-card">
-          <div class="diff-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M8 13.5l4-4 4 4"></path>
-              <path d="M12 9.5v11"></path>
-              <path d="M3 5h18"></path>
-            </svg>
-          </div>
-          <h3>Get Back Outside</h3>
-          <p>Skiing. Running. Hiking. Paddling. We rehab you for the life you actually live in Bend.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="section services-section">
-    <div class="container services-container">
-      <div class="services-left">
-        <h2>Expertise that gets you back.</h2>
-        <p>Whether you're overcoming chronic pain, recovering from surgery, or pushing for a new personal record, our
-          hands-on specialized physical therapy works.</p>
-      </div>
-      <div class="services-right">
-        <div class="service-card">
-          <h3>Post-Operative Care</h3>
-          <p>Dedicated tracking of surgical protocols so you regain your strength, mobility, and confidence.</p>
-          <a href="#" class="service-link">Learn More &rarr;</a>
-        </div>
-        <div class="service-card">
-          <h3>Injury Rehab</h3>
-          <p>Comprehensive evaluation and treatment for shoulders, knees, backs, and everything in between.</p>
-          <a href="#" class="service-link">Learn More &rarr;</a>
-        </div>
-        <div class="service-card">
-          <h3>Manual Therapy</h3>
-          <p>Targeted hands-on tissue treatment combined with joint mobilization to release tension.</p>
-          <a href="#" class="service-link">Learn More &rarr;</a>
-        </div>
-        <div class="service-card">
-          <h3>Running Rehab</h3>
-          <p>Video gait analysis and DorsaVi wearable sensors to track biomechanics.</p>
-          <a href="#" class="service-link">Learn More &rarr;</a>
-        </div>
-        <div class="service-card">
-          <h3>Vestibular/Vertigo</h3>
-          <p>Specialized testing and repositioning to conquer dizziness and balance issues.</p>
-          <a href="#" class="service-link">Learn More &rarr;</a>
-        </div>
-        <div class="service-card">
-          <h3>Chronic Pain</h3>
-          <p>Finding long-term relief when typical interventions have failed in the past.</p>
-          <a href="#" class="service-link">Learn More &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Meet the Team -->
-  <section id="team" class="section team-section">
-    <div class="text-center mb-2">
-      <h2>Meet the Team</h2>
-      <p style="opacity:0.8;">Exceptional therapists, real people.</p>
-    </div>
-    <div class="team-carousel">
-      <!-- Therapist 1 -->
-      <div class="team-card">
-        <img src="images/jenny_portrait.png" alt="Jenny McAteer Photo" class="team-image">
-        <div class="team-info">
-          <div class="team-title">Founder / DPT</div>
-          <h3>Jenny McAteer</h3>
-          <p>Jenny built Resolve to offer true 1:1 care. When she isn't un-knotting a chronic pain puzzle, she's
-            exploring the Cascades and chasing sunsets.</p>
-        </div>
-      </div>
-      <!-- Therapist 2 -->
-      <div class="team-card">
-        <img
-          src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-          alt="Nate Palmer Photo" class="team-image">
-        <div class="team-info">
-          <div class="team-title">DPT</div>
-          <h3>Nate Palmer</h3>
-          <p>Nate thru-hiked the PCT. He understands endurance athletes firsthand and tailors plans to get runners back
-            on the trail quickly.</p>
-        </div>
-      </div>
-      <!-- Therapist 3 -->
-      <div class="team-card">
-        <img
-          src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-          alt="Kasey Lohman Photo" class="team-image">
-        <div class="team-info">
-          <div class="team-title">DPT</div>
-          <h3>Kasey Lohman</h3>
-          <p>A specialist in post-op recovery. Kasey is passionate about restoring complex joints, back-country hunting,
-            and cooking.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Patient Stories -->
-  <section class="section stories-section">
-    <div class="container">
-      <div class="quote-mark">"</div>
-      <div class="testimonial-carousel">
-        <div class="testimonial active">
-          <p>"I came in for my first session using a walker and left my last session walking circles."</p>
-          <strong>– John D.</strong>
-        </div>
-        <div class="testimonial">
-          <p>"He took the time to show me through my movements WHY I was having the pain."</p>
-          <strong>– Sarah M.</strong>
-        </div>
-        <div class="testimonial">
-          <p>"From the time your appointment starts until the end, you will always be with your PT."</p>
-          <strong>– Eric K.</strong>
-        </div>
-      </div>
-      <div class="carousel-dots">
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Patient Info -->
-  <section id="info" class="section">
-    <div class="container text-center">
-      <h2 style="margin-bottom:1rem;">Patient Information</h2>
-      <p style="max-width:600px; margin:0 auto var(--space-md); opacity:0.8;">We want your first visit to be as smooth
-        as possible. Here are a few things to know before you arrive.</p>
-
-      <div
-        style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-md); text-align:left;">
-        <div style="background:var(--bg-stone); padding:var(--space-md); border-radius:var(--radius-md);">
-          <h3 style="font-size:1.25rem; color:var(--accent-sage);">Insurance & Billing</h3>
-          <p>We accept most major insurances including Medicare and Medicaid/OHP. We will verify your benefits prior to
-            your first appointment so there are no surprises.</p>
-        </div>
-        <div style="background:var(--bg-stone); padding:var(--space-md); border-radius:var(--radius-md);">
-          <h3 style="font-size:1.25rem; color:var(--accent-sage);">What to Wear</h3>
-          <p>Please wear comfortable, loose-fitting athletic clothing that allows access to the area we are treating.
-            Running shoes are recommended if we are performing gait analysis.</p>
-        </div>
-        <div style="background:var(--bg-stone); padding:var(--space-md); border-radius:var(--radius-md);">
-          <h3 style="font-size:1.25rem; color:var(--accent-sage);">Your First Visit</h3>
-          <p>Your initial evaluation will be a full 60 minutes one-on-one with your therapist. We will discuss your
-            history, assess your movement, and begin treatment immediately.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & Location -->
-  <section id="contact" class="section contact-section">
-    <div class="container contact-container">
-      <div class="contact-left">
-        <h2>Find Us in Bend</h2>
-        <div class="map-embed">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2865.719601449419!2d-121.3323085!3d44.0673397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54b8c7cb062fa9fd%3A0xc545cffecfa35b38!2s1740%20NW%20Pence%20Ln%20Ste%205%2C%20Bend%2C%20OR%2097703!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
-        </div>
-        <div class="contact-info">
-          <p><strong>Address:</strong> 1740 NW Pence Ln, Suite 5, Bend, OR 97703</p>
-          <p><strong>Phone:</strong> <a href="tel:5413061099">(541) 306-1099</a></p>
-          <p><strong>Hours:</strong> Mon–Thu 8:30–5:30, Fri 8:30–1:00</p>
-        </div>
-      </div>
-      <div class="contact-right">
-        <div class="contact-form">
-          <h3 style="margin-bottom:1rem;">Request an Appointment</h3>
-          <form>
-            <div class="form-group">
-              <label for="name" style="display:none;">Name</label>
-              <input type="text" id="name" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <label for="phone" style="display:none;">Phone</label>
-              <input type="tel" id="phone" class="form-control" placeholder="Phone Number" required>
-            </div>
-            <div class="form-group">
-              <label for="email" style="display:none;">Email</label>
-              <input type="email" id="email" class="form-control" placeholder="Email Address" required>
-            </div>
-            <div class="form-group">
-              <label for="reason" style="display:none;">Reason for Visit</label>
-              <textarea id="reason" class="form-control" rows="4" placeholder="What brings you in?"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">Schedule
-              Appointment</button>
-            <p class="hipaa-notice">
-              We accept most insurances including Medicare and Medicaid/OHP.<br><br>
-              <strong>HIPAA Notice:</strong> This form collects basic contact information to reach you regarding an
-              appointment. Please do not submit sensitive medical documentation.
-            </p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container text-center">
-      <h2>Resolve</br> Physical Therapy</h2>
-      <p style="margin-bottom:2rem; color:var(--bg-stone);">Bend, Oregon | Founded 2018</p>
-
-      <div style="display:flex; justify-content:center; gap:1rem; margin-bottom:2rem;">
-        <a href="tel:5413061099">(541) 306-1099</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact">Schedule Appointment</a>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Resolve Physical Therapy. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
 </body>
 
 </html>
