@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html class="avada-html-layout-wide avada-html-header-position-top" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head> <script type="text/javascript">
+/* <![CDATA[ */
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+/* ]]> */
+</script>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Page not found - Resolve Physical Therapy | Bend, OR</title>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Page not found - Resolve Physical Therapy | Bend, OR" />
+	<meta property="og:site_name" content="Resolve Physical Therapy | Bend, OR" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://resolveptbend.com/#website","url":"https://resolveptbend.com/","name":"Resolve Physical Therapy | Bend, OR","description":"Resolve Physical Therapy","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://resolveptbend.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Resolve Physical Therapy | Bend, OR &raquo; Feed" href="https://resolveptbend.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Resolve Physical Therapy | Bend, OR &raquo; Comments Feed" href="https://resolveptbend.com/comments/feed/" />
+		
+		
+		
+								
+		<meta property="og:locale" content="en_US"/>
+		<meta property="og:type" content="article"/>
+		<meta property="og:site_name" content="Resolve Physical Therapy | Bend, OR"/>
+		<meta property="og:title" content="Page not found - Resolve Physical Therapy | Bend, OR"/>
+				<meta property="og:url" content="https://resolveptbend.com/common-climbing-injuries/"/>
+																				<meta property="og:image" content="https://resolveptbend.com/wp-content/uploads/2021/05/climbing-youtube-video.png"/>
+		<meta property="og:image:width" content="1280"/>
+		<meta property="og:image:height" content="720"/>
+		<meta property="og:image:type" content="image/png"/>
+				<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-components-css' href='https://resolveptbend.com/wp-includes/css/dist/components/style.min.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-preferences-css' href='https://resolveptbend.com/wp-includes/css/dist/preferences/style.min.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-editor-css' href='https://resolveptbend.com/wp-includes/css/dist/block-editor/style.min.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='popup-maker-block-library-style-css' href='https://resolveptbend.com/wp-content/plugins/popup-maker/dist/packages/block-library-style.css?ver=dbea705cfafe089d65f1' type='text/css' media='all' />
+<link rel='stylesheet' id='brb-public-main-css-css' href='https://resolveptbend.com/wp-content/plugins/business-reviews-bundle/assets/css/public-main.css?ver=1.9.114' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_reset_css-css' href='https://resolveptbend.com/wp-content/plugins/gravityforms/legacy/css/formreset.min.css?ver=2.9.28' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_datepicker_css-css' href='https://resolveptbend.com/wp-content/plugins/gravityforms/legacy/css/datepicker.min.css?ver=2.9.28' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_formsmain_css-css' href='https://resolveptbend.com/wp-content/plugins/gravityforms/legacy/css/formsmain.min.css?ver=2.9.28' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_ready_class_css-css' href='https://resolveptbend.com/wp-content/plugins/gravityforms/legacy/css/readyclass.min.css?ver=2.9.28' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_browsers_css-css' href='https://resolveptbend.com/wp-content/plugins/gravityforms/legacy/css/browsers.min.css?ver=2.9.28' type='text/css' media='all' />
+<link rel='stylesheet' id='popup-maker-site-css' href='//resolveptbend.com/wp-content/uploads/pum/pum-site-styles.css?generated=1751984153&#038;ver=1.21.5' type='text/css' media='all' />
+<link rel='stylesheet' id='__EPYT__style-css' href='https://resolveptbend.com/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=14.2.3.2' type='text/css' media='all' />
+<style id='__EPYT__style-inline-css' type='text/css'>
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+/*# sourceURL=__EPYT__style-inline-css */
+</style>
+<link rel='stylesheet' id='fusion-dynamic-css-css' href='https://resolveptbend.com/wp-content/uploads/fusion-styles/eb0e47981c50e14c0f36645fc4c48135.min.css?ver=3.13.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://resolveptbend.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="brb-public-main-js-js-extra">
+/* <![CDATA[ */
+var brb_vars = {"ajaxurl":"https://resolveptbend.com/wp-admin/admin-ajax.php","gavatar":"https://resolveptbend.com/wp-content/plugins/business-reviews-bundle/assets/img/google_avatar.png"};
+//# sourceURL=brb-public-main-js-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" defer="defer" src="https://resolveptbend.com/wp-content/plugins/business-reviews-bundle/assets/js/public-main.js?ver=1.9.114" id="brb-public-main-js-js"></script>
+<script type="text/javascript" defer='defer' src="https://resolveptbend.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.28" id="gform_json-js"></script>
+<script type="text/javascript" id="gform_gravityforms-js-extra">
+/* <![CDATA[ */
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https://resolveptbend.com/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://resolveptbend.com/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"68cec33af2c7d50ed3aed273bc3f264d","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https://resolveptbend.com/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://resolveptbend.com/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"68cec33af2c7d50ed3aed273bc3f264d","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = {"1":"1"};
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://resolveptbend.com/wp-content/plugins/gravityforms/images"}};
+//# sourceURL=gform_gravityforms-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://resolveptbend.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.28" id="gform_gravityforms-js"></script>
+<script type="text/javascript" defer='defer' src="https://resolveptbend.com/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=48a3755090e76a154853db28fc254681" id="gform_gravityforms_utils-js"></script>
+<script type="text/javascript" id="__ytprefs__-js-extra">
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https://resolveptbend.com/wp-admin/admin-ajax.php","security":"1ab0582e7a","gallery_scrolloffset":"20","eppathtoscripts":"https://resolveptbend.com/wp-content/plugins/youtube-embed-plus/scripts/","eppath":"https://resolveptbend.com/wp-content/plugins/youtube-embed-plus/","epresponsiveselector":"[\"iframe.__youtube_prefs__\",\"iframe[src*='youtube.com']\",\"iframe[src*='youtube-nocookie.com']\",\"iframe[data-ep-src*='youtube.com']\",\"iframe[data-ep-src*='youtube-nocookie.com']\",\"iframe[data-ep-gallerysrc*='youtube.com']\"]","epdovol":"1","version":"14.2.3.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com/embed/\"], iframe[src*=\"youtube-nocookie.com/embed/\"]","ajax_compat":"","maxres_facade":"eager","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","facade_mode":"","not_live_on_channel":""};
+//# sourceURL=__ytprefs__-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=14.2.3.2" id="__ytprefs__-js"></script>
+<link rel="https://api.w.org/" href="https://resolveptbend.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://resolveptbend.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-86107764-18"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-86107764-18');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '602121410812703');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=602121410812703&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code --><style type="text/css" id="css-fb-visibility">@media screen and (max-width: 640px){.fusion-no-small-visibility{display:none !important;}body .sm-text-align-center{text-align:center !important;}body .sm-text-align-left{text-align:left !important;}body .sm-text-align-right{text-align:right !important;}body .sm-flex-align-center{justify-content:center !important;}body .sm-flex-align-flex-start{justify-content:flex-start !important;}body .sm-flex-align-flex-end{justify-content:flex-end !important;}body .sm-mx-auto{margin-left:auto !important;margin-right:auto !important;}body .sm-ml-auto{margin-left:auto !important;}body .sm-mr-auto{margin-right:auto !important;}body .fusion-absolute-position-small{position:absolute;top:auto;width:100%;}.awb-sticky.awb-sticky-small{ position: sticky; top: var(--awb-sticky-offset,0); }}@media screen and (min-width: 641px) and (max-width: 1024px){.fusion-no-medium-visibility{display:none !important;}body .md-text-align-center{text-align:center !important;}body .md-text-align-left{text-align:left !important;}body .md-text-align-right{text-align:right !important;}body .md-flex-align-center{justify-content:center !important;}body .md-flex-align-flex-start{justify-content:flex-start !important;}body .md-flex-align-flex-end{justify-content:flex-end !important;}body .md-mx-auto{margin-left:auto !important;margin-right:auto !important;}body .md-ml-auto{margin-left:auto !important;}body .md-mr-auto{margin-right:auto !important;}body .fusion-absolute-position-medium{position:absolute;top:auto;width:100%;}.awb-sticky.awb-sticky-medium{ position: sticky; top: var(--awb-sticky-offset,0); }}@media screen and (min-width: 1025px){.fusion-no-large-visibility{display:none !important;}body .lg-text-align-center{text-align:center !important;}body .lg-text-align-left{text-align:left !important;}body .lg-text-align-right{text-align:right !important;}body .lg-flex-align-center{justify-content:center !important;}body .lg-flex-align-flex-start{justify-content:flex-start !important;}body .lg-flex-align-flex-end{justify-content:flex-end !important;}body .lg-mx-auto{margin-left:auto !important;margin-right:auto !important;}body .lg-ml-auto{margin-left:auto !important;}body .lg-mr-auto{margin-right:auto !important;}body .fusion-absolute-position-large{position:absolute;top:auto;width:100%;}.awb-sticky.awb-sticky-large{ position: sticky; top: var(--awb-sticky-offset,0); }}</style><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by Slider Revolution 6.7.37 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<link rel="icon" href="https://resolveptbend.com/wp-content/uploads/2018/11/Resolve_Logo_R_32-1.png" sizes="32x32" />
+<link rel="icon" href="https://resolveptbend.com/wp-content/uploads/2018/11/Resolve_Logo_R_32-1.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://resolveptbend.com/wp-content/uploads/2018/11/Resolve_Logo_R_32-1.png" />
+<meta name="msapplication-TileImage" content="https://resolveptbend.com/wp-content/uploads/2018/11/Resolve_Logo_R_32-1.png" />
+<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+		<script type="text/javascript">
+			var doc = document.documentElement;
+			doc.setAttribute( 'data-useragent', navigator.userAgent );
+		</script>
+		
+	<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--awb-color-1: rgba(255,255,255,1);--wp--preset--color--awb-color-2: rgba(246,246,246,1);--wp--preset--color--awb-color-3: rgba(235,234,234,1);--wp--preset--color--awb-color-4: rgba(224,222,222,1);--wp--preset--color--awb-color-5: rgba(140,198,236,1);--wp--preset--color--awb-color-6: rgba(160,206,78,1);--wp--preset--color--awb-color-7: rgba(116,116,116,1);--wp--preset--color--awb-color-8: rgba(51,51,51,1);--wp--preset--color--awb-color-custom-10: rgba(139,197,235,1);--wp--preset--color--awb-color-custom-11: rgba(0,0,0,1);--wp--preset--color--awb-color-custom-12: rgba(235,234,234,0.8);--wp--preset--color--awb-color-custom-13: rgba(143,201,238,1);--wp--preset--color--awb-color-custom-14: rgba(54,56,57,1);--wp--preset--color--awb-color-custom-15: rgba(232,232,232,1);--wp--preset--color--awb-color-custom-16: rgba(190,189,189,1);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 12px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 24px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--xlarge: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:69aaf0fac55e3*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote :where(cite),.wp-block-pullquote :where(footer),.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote:where(.has-text-align-right){border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote:where(.has-text-align-center){border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:#ffffffa6}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:#ffffffa6}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+/*# sourceURL=/wp-includes/css/dist/block-library/theme.min.css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='rs-plugin-settings-css' href='//resolveptbend.com/wp-content/plugins/revslider/sr6/assets/css/rs6.css?ver=6.7.37' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+/*# sourceURL=rs-plugin-settings-inline-css */
+</style>
+</head>
+
+<body class="error404 wp-theme-Avada fusion-image-hovers fusion-pagination-sizing fusion-button_type-flat fusion-button_span-no fusion-button_gradient-linear avada-image-rollover-circle-yes avada-image-rollover-yes avada-image-rollover-direction-left fusion-body ltr fusion-sticky-header no-tablet-sticky-header no-mobile-sticky-header no-mobile-slidingbar no-mobile-totop avada-has-rev-slider-styles fusion-disable-outline fusion-sub-menu-fade mobile-logo-pos-left layout-wide-mode avada-has-boxed-modal-shadow-none layout-scroll-offset-full avada-has-zero-margin-offset-top fusion-top-header menu-text-align-center mobile-menu-design-modern fusion-show-pagination-text fusion-header-layout-v1 avada-responsive avada-footer-fx-none avada-menu-highlight-style-bar fusion-search-form-classic fusion-main-menu-search-overlay fusion-avatar-square avada-dropdown-styles avada-blog-layout-large avada-blog-archive-layout-large avada-header-shadow-no avada-menu-icon-position-left avada-has-megamenu-shadow avada-has-mainmenu-dropdown-divider avada-has-pagetitle-100-width avada-has-pagetitle-bg-full avada-has-pagetitle-bg-parallax avada-has-pagetitlebar-retina-bg-image avada-has-titlebar-bar_and_content avada-header-border-color-full-transparent avada-has-pagination-padding avada-flyout-menu-direction-fade avada-ec-views-v1" data-awb-post-id="803">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<div id="boxed-wrapper">
+		
+		<div id="wrapper" class="fusion-wrapper">
+			<div id="home" style="position:relative;top:-1px;"></div>
+												<div class="fusion-tb-header"><div class="fusion-fullwidth fullwidth-box fusion-builder-row-1 fusion-flex-container has-pattern-background has-mask-background nonhundred-percent-fullwidth non-hundred-percent-height-scrolling fusion-sticky-container" style="--awb-border-radius-top-left:0px;--awb-border-radius-top-right:0px;--awb-border-radius-bottom-right:0px;--awb-border-radius-bottom-left:0px;--awb-padding-top:0px;--awb-padding-bottom:5px;--awb-background-color:#8bc5eb;--awb-flex-wrap:wrap;" data-transition-offset="0" data-scroll-offset="0" data-sticky-medium-visibility="1" data-sticky-large-visibility="1" ><div class="fusion-builder-row fusion-row fusion-flex-align-items-flex-start fusion-flex-content-wrap" style="max-width:1144px;margin-left: calc(-4% / 2 );margin-right: calc(-4% / 2 );"><div class="fusion-layout-column fusion_builder_column fusion-builder-column-0 fusion_builder_column_1_1 1_1 fusion-flex-column fusion-column-inner-bg-wrapper" style="--awb-padding-top:5px;--awb-inner-bg-size:cover;--awb-width-large:100%;--awb-margin-top-large:0px;--awb-spacing-right-large:1.92%;--awb-margin-bottom-large:0px;--awb-spacing-left-large:1.92%;--awb-width-medium:100%;--awb-order-medium:0;--awb-spacing-right-medium:1.92%;--awb-spacing-left-medium:1.92%;--awb-width-small:100%;--awb-order-small:0;--awb-spacing-right-small:1.92%;--awb-spacing-left-small:1.92%;" data-scroll-devices="small-visibility,medium-visibility,large-visibility"><span class="fusion-column-inner-bg hover-type-none"><a class="fusion-column-anchor" href="https://resolveptbend.com/services/focused-shockwave-therapy/"><span class="fusion-column-inner-bg-image"></span></a></span><div class="fusion-column-wrapper fusion-column-has-shadow fusion-flex-justify-content-flex-start fusion-content-layout-column"><div class="fusion-title title fusion-title-1 fusion-sep-none fusion-title-marquee fusion-animate-once fusion-title-size-three" style="--awb-text-color:var(--awb-custom11);--awb-margin-bottom:0px;--awb-marquee-speed:21250ms;--awb-marquee-translate-x:-100%;"><h3 class="fusion-title-heading title-heading-left awb-marquee-left" style="margin:0;"><span class="awb-marquee-content"><p style="text-align: center; margin: 0px;">NOW OFFERING SHOCKWAVE THERAPY! Click to learn more!          NOW OFFERING SHOCKWAVE THERAPY! Click to learn more!</p></span><span class="awb-marquee-content"><p style="text-align: center; margin: 0px;">NOW OFFERING SHOCKWAVE THERAPY! Click to learn more!          NOW OFFERING SHOCKWAVE THERAPY! Click to learn more!</p></span></h3></div></div></div></div></div><div class="fusion-fullwidth fullwidth-box fusion-builder-row-2 fusion-flex-container has-pattern-background has-mask-background nonhundred-percent-fullwidth non-hundred-percent-height-scrolling fusion-sticky-container fusion-custom-z-index" style="--awb-border-radius-top-left:0px;--awb-border-radius-top-right:0px;--awb-border-radius-bottom-right:0px;--awb-border-radius-bottom-left:0px;--awb-z-index:9999;--awb-background-color:var(--awb-color1);--awb-flex-wrap:wrap;" data-transition-offset="0" data-sticky-offset="35px" data-scroll-offset="0" data-sticky-medium-visibility="1" data-sticky-large-visibility="1" ><div class="fusion-builder-row fusion-row fusion-flex-align-items-center fusion-flex-content-wrap" style="max-width:1144px;margin-left: calc(-4% / 2 );margin-right: calc(-4% / 2 );"><div class="fusion-layout-column fusion_builder_column fusion-builder-column-1 fusion_builder_column_1_4 1_4 fusion-flex-column" style="--awb-bg-size:cover;--awb-width-large:25%;--awb-margin-top-large:0px;--awb-spacing-right-large:7.68%;--awb-margin-bottom-large:0px;--awb-spacing-left-large:7.68%;--awb-width-medium:25%;--awb-order-medium:0;--awb-spacing-right-medium:7.68%;--awb-spacing-left-medium:7.68%;--awb-width-small:50%;--awb-order-small:0;--awb-spacing-right-small:3.84%;--awb-spacing-left-small:3.84%;" data-scroll-devices="small-visibility,medium-visibility,large-visibility"><div class="fusion-column-wrapper fusion-column-has-shadow fusion-flex-justify-content-flex-start fusion-content-layout-column"><div class="fusion-image-element " style="--awb-caption-title-font-family:var(--h2_typography-font-family);--awb-caption-title-font-weight:var(--h2_typography-font-weight);--awb-caption-title-font-style:var(--h2_typography-font-style);--awb-caption-title-size:var(--h2_typography-font-size);--awb-caption-title-transform:var(--h2_typography-text-transform);--awb-caption-title-line-height:var(--h2_typography-line-height);--awb-caption-title-letter-spacing:var(--h2_typography-letter-spacing);"><span class=" fusion-imageframe imageframe-none imageframe-1 hover-type-none"><a class="fusion-no-lightbox" href="https://resolveptbend.com/" target="_self" aria-label="Resolve_Logo_Alt"><img decoding="async" width="396" height="107" alt="Resolve Physical Therapy Logo" src="https://resolveptbend.com/wp-content/uploads/2018/11/Resolve_Logo_Alt-1.svg" class="img-responsive wp-image-45"/></a></span></div></div></div><div class="fusion-layout-column fusion_builder_column fusion-builder-column-2 fusion_builder_column_3_4 3_4 fusion-flex-column" style="--awb-bg-size:cover;--awb-width-large:75%;--awb-margin-top-large:0px;--awb-spacing-right-large:2.56%;--awb-margin-bottom-large:0px;--awb-spacing-left-large:2.56%;--awb-width-medium:75%;--awb-order-medium:0;--awb-spacing-right-medium:2.56%;--awb-spacing-left-medium:2.56%;--awb-width-small:50%;--awb-order-small:0;--awb-spacing-right-small:3.84%;--awb-spacing-left-small:3.84%;" data-scroll-devices="small-visibility,medium-visibility,large-visibility"><div class="fusion-column-wrapper fusion-column-has-shadow fusion-flex-justify-content-flex-start fusion-content-layout-column"><nav class="awb-menu awb-menu_row awb-menu_em-hover mobile-mode-collapse-to-button awb-menu_icons-left awb-menu_dc-yes mobile-trigger-fullwidth-off awb-menu_mobile-toggle awb-menu_indent-left mobile-size-full-absolute loading mega-menu-loading awb-menu_desktop awb-menu_dropdown awb-menu_expand-right awb-menu_transition-fade" style="--awb-gap:20px;--awb-justify-content:flex-end;--awb-active-color:var(--awb-color5);--awb-main-justify-content:flex-start;--awb-mobile-nav-button-align-hor:flex-end;--awb-mobile-trigger-background-color:rgba(255,255,255,0);--awb-mobile-justify:flex-start;--awb-mobile-caret-left:auto;--awb-mobile-caret-right:0;--awb-fusion-font-family-typography:inherit;--awb-fusion-font-style-typography:normal;--awb-fusion-font-weight-typography:400;--awb-fusion-font-family-submenu-typography:inherit;--awb-fusion-font-style-submenu-typography:normal;--awb-fusion-font-weight-submenu-typography:400;--awb-fusion-font-family-mobile-typography:inherit;--awb-fusion-font-style-mobile-typography:normal;--awb-fusion-font-weight-mobile-typography:400;" aria-label="Main Menu" data-breakpoint="1024" data-count="0" data-transition-type="fade" data-transition-time="300" data-expand="right"><button type="button" class="awb-menu__m-toggle awb-menu__m-toggle_no-text" aria-expanded="false" aria-controls="menu-main-menu"><span class="awb-menu__m-toggle-inner"><span class="collapsed-nav-text"><span class="screen-reader-text">Toggle Navigation</span></span><span class="awb-menu__m-collapse-icon awb-menu__m-collapse-icon_no-text"><span class="awb-menu__m-collapse-icon-open awb-menu__m-collapse-icon-open_no-text fa-bars fas"></span><span class="awb-menu__m-collapse-icon-close awb-menu__m-collapse-icon-close_no-text fa-times fas"></span></span></span></button><ul id="menu-main-menu" class="fusion-menu awb-menu__main-ul awb-menu__main-ul_row"><li  id="menu-item-55"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-55 awb-menu__li awb-menu__main-li awb-menu__main-li_regular"  data-item-id="55"><span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a  href="https://resolveptbend.com/services/" class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">Services</span><span class="awb-menu__open-nav-submenu-hover"></span></a><button type="button" aria-label="Open submenu of Services" aria-expanded="false" class="awb-menu__open-nav-submenu_mobile awb-menu__open-nav-submenu_main"></button><ul class="awb-menu__sub-ul awb-menu__sub-ul_main"><li  id="menu-item-979"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-979 awb-menu__li awb-menu__sub-li" ><a  href="https://resolveptbend.com/services/focused-shockwave-therapy/" class="awb-menu__sub-a"><span>Focused Shockwave Therapy</span></a></li><li  id="menu-item-136"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136 awb-menu__li awb-menu__sub-li" ><a  href="https://resolveptbend.com/services/post-operative-care/" class="awb-menu__sub-a"><span>Post Operative Care</span></a></li><li  id="menu-item-531"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-531 awb-menu__li awb-menu__sub-li" ><a  href="https://resolveptbend.com/services/running-rehab/" class="awb-menu__sub-a"><span>Running Rehab</span></a></li><li  id="menu-item-216"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216 awb-menu__li awb-menu__sub-li" ><a  href="https://resolveptbend.com/services/injuries/" class="awb-menu__sub-a"><span>Injuries</span></a></li><li  id="menu-item-215"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215 awb-menu__li awb-menu__sub-li" ><a  href="https://resolveptbend.com/services/manual-therapy/" class="awb-menu__sub-a"><span>Manual Therapy</span></a></li><li  id="menu-item-219"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219 awb-menu__li awb-menu__sub-li" ><a  href="https://resolveptbend.com/services/vestibular-rehab-therapy/" class="awb-menu__sub-a"><span>Vestibular Rehab Therapy</span></a></li><li  id="menu-item-885"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-885 awb-menu__li awb-menu__sub-li" ><a  href="https://resolveptbend.com/services/chronic-pain/" class="awb-menu__sub-a"><span>Chronic Pain</span></a></li></ul></li><li  id="menu-item-137"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137 awb-menu__li awb-menu__main-li awb-menu__main-li_regular"  data-item-id="137"><span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a  href="https://resolveptbend.com/about/" class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">About</span></a></li><li  id="menu-item-233"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233 awb-menu__li awb-menu__main-li awb-menu__main-li_regular"  data-item-id="233"><span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a  href="https://resolveptbend.com/patient-information/" class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">Patient Information</span></a></li><li  id="menu-item-466"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-466 awb-menu__li awb-menu__main-li awb-menu__main-li_regular"  data-item-id="466"><span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a  href="https://resolveptbend.com/careers/" class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">Careers</span></a></li><li  id="menu-item-895"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-895 awb-menu__li awb-menu__main-li awb-menu__main-li_regular"  data-item-id="895"><span class="awb-menu__main-background-default awb-menu__main-background-default_fade"></span><span class="awb-menu__main-background-active awb-menu__main-background-active_fade"></span><a  href="https://resolveptbend.com/resources/" class="awb-menu__main-a awb-menu__main-a_regular"><span class="menu-text">Resources</span><span class="awb-menu__open-nav-submenu-hover"></span></a><button type="button" aria-label="Open submenu of Resources" aria-expanded="false" class="awb-menu__open-nav-submenu_mobile awb-menu__open-nav-submenu_main"></button><ul class="awb-menu__sub-ul awb-menu__sub-ul_main"><li  id="menu-item-609"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-609 awb-menu__li awb-menu__sub-li" ><a  href="https://resolveptbend.com/blog/" class="awb-menu__sub-a"><span>Blog</span></a></li><li  id="menu-item-600"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-600 awb-menu__li awb-menu__sub-li" ><a  href="https://resolveptbend.com/videos/" class="awb-menu__sub-a"><span>Videos</span></a></li><li  id="menu-item-627"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-627 awb-menu__li awb-menu__sub-li" ><a  href="https://resolveptbend.com/products/" class="awb-menu__sub-a"><span>Products</span></a></li></ul></li><li  id="menu-item-154"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154 awb-menu__li awb-menu__main-li awb-menu__li_button"  data-item-id="154"><a  href="https://resolveptbend.com/contact/" class="awb-menu__main-a awb-menu__main-a_button"><span class="menu-text fusion-button button-default button-medium">Contact</span></a></li></ul></nav></div></div></div></div>
+</div>		<div id="sliders-container" class="fusion-slider-visibility">
+					</div>
+											
+			<section class="avada-page-titlebar-wrapper" aria-label="Page Title Bar">
+	<div class="fusion-page-title-bar fusion-page-title-bar-none fusion-page-title-bar-center">
+		<div class="fusion-page-title-row">
+			<div class="fusion-page-title-wrapper">
+				<div class="fusion-page-title-captions">
+
+																							<h1 class="entry-title">Error 404 Page</h1>
+
+											
+																		<div class="fusion-page-title-secondary">
+								<nav class="fusion-breadcrumbs awb-yoast-breadcrumbs" aria-label="Breadcrumb"><ol class="awb-breadcrumb-list"><li class="fusion-breadcrumb-item awb-breadcrumb-sep awb-home" ><a href="https://resolveptbend.com" class="fusion-breadcrumb-link"><span >Home</span></a></li><li class="fusion-breadcrumb-item" ><span >404 - Page not Found</span></li></ol></nav>							</div>
+											
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+						<main id="main" class="clearfix ">
+				<div class="fusion-row" style="">
+<section id="content" class="full-width">
+	<div id="post-404page">
+		<div class="post-content">
+						<div class="fusion-title fusion-title-size-two sep-none fusion-sep-none" style="margin-top:0px;margin-bottom:31px;">
+				<h2 class="title-heading-left" style="margin:0;">
+					Oops, This Page Could Not Be Found!				</h2>
+			</div>
+						<div class="fusion-clearfix"></div>
+			<div class="error-page">
+				<div class="fusion-columns fusion-columns-3">
+					<div class="fusion-column col-lg-4 col-md-4 col-sm-4 fusion-error-page-404">
+						<div class="error-message">404</div>
+					</div>
+					<div class="fusion-column col-lg-4 col-md-4 col-sm-4 useful-links fusion-error-page-useful-links">
+						<h3>Helpful Links</h3>
+						<ul id="fusion-checklist-1" class="fusion-checklist fusion-404-checklist error-menu" style="font-size:14px;line-height:23.8px;"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><span class="icon-wrapper circle-yes" style="background-color:var(--checklist_circle_color);font-size:14px;height:23.8px;width:23.8px;margin-right:9.8px;" ><i class="fusion-li-icon fa fa-angle-right" style="color:var(--checklist_icons_color);" aria-hidden="true"></i></span><div class="fusion-li-item-content" style="margin-left:33.6px;"><a href="https://resolveptbend.com/services/">Services</a></div></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137"><span class="icon-wrapper circle-yes" style="background-color:var(--checklist_circle_color);font-size:14px;height:23.8px;width:23.8px;margin-right:9.8px;" ><i class="fusion-li-icon fa fa-angle-right" style="color:var(--checklist_icons_color);" aria-hidden="true"></i></span><div class="fusion-li-item-content" style="margin-left:33.6px;"><a href="https://resolveptbend.com/about/">About</a></div></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233"><span class="icon-wrapper circle-yes" style="background-color:var(--checklist_circle_color);font-size:14px;height:23.8px;width:23.8px;margin-right:9.8px;" ><i class="fusion-li-icon fa fa-angle-right" style="color:var(--checklist_icons_color);" aria-hidden="true"></i></span><div class="fusion-li-item-content" style="margin-left:33.6px;"><a href="https://resolveptbend.com/patient-information/">Patient Information</a></div></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-466"><span class="icon-wrapper circle-yes" style="background-color:var(--checklist_circle_color);font-size:14px;height:23.8px;width:23.8px;margin-right:9.8px;" ><i class="fusion-li-icon fa fa-angle-right" style="color:var(--checklist_icons_color);" aria-hidden="true"></i></span><div class="fusion-li-item-content" style="margin-left:33.6px;"><a href="https://resolveptbend.com/careers/">Careers</a></div></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-895"><span class="icon-wrapper circle-yes" style="background-color:var(--checklist_circle_color);font-size:14px;height:23.8px;width:23.8px;margin-right:9.8px;" ><i class="fusion-li-icon fa fa-angle-right" style="color:var(--checklist_icons_color);" aria-hidden="true"></i></span><div class="fusion-li-item-content" style="margin-left:33.6px;"><a href="https://resolveptbend.com/resources/">Resources</a></div></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><span class="icon-wrapper circle-yes" style="background-color:var(--checklist_circle_color);font-size:14px;height:23.8px;width:23.8px;margin-right:9.8px;" ><i class="fusion-li-icon fa fa-angle-right" style="color:var(--checklist_icons_color);" aria-hidden="true"></i></span><div class="fusion-li-item-content" style="margin-left:33.6px;"><a href="https://resolveptbend.com/contact/">Contact</a></div></li></ul>					</div>
+					<div class="fusion-column col-lg-4 col-md-4 col-sm-4 fusion-error-page-search">
+						<h3>Search Our Website</h3>
+						<p>Can&#039;t find what you need? Take a moment and do a search below!</p>
+						<div class="search-page-search-form">
+									<form role="search" class="searchform fusion-search-form  fusion-search-form-classic" method="get" action="https://resolveptbend.com/">
+			<div class="fusion-search-form-content">
+
+				
+				<div class="fusion-search-field search-field">
+					<label><span class="screen-reader-text">Search for:</span>
+													<input type="search" value="" name="s" class="s" placeholder="Search..." required aria-required="true" aria-label="Search..."/>
+											</label>
+				</div>
+				<div class="fusion-search-button search-button">
+					<input type="submit" class="fusion-search-submit searchsubmit" aria-label="Search" value="&#xf002;" />
+									</div>
+
+				
+			</div>
+
+
+			
+		</form>
+								</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+						
+					</div>  <!-- fusion-row -->
+				</main>  <!-- #main -->
+				
+				
+								
+					
+		<div class="fusion-footer">
+					
+	<footer class="fusion-footer-widget-area fusion-widget-area">
+		<div class="fusion-row">
+			<div class="fusion-columns fusion-columns-3 fusion-widget-area">
+				
+																									<div class="fusion-column col-lg-4 col-md-4 col-sm-4">
+							<section id="custom_html-5" class="widget_text fusion-footer-widget-column widget widget_custom_html"><h4 class="widget-title">OUR SERVICES</h4><div class="textwidget custom-html-widget"><p class="footer-links">
+<a href="https://resolveptbend.com/services/post-operative-care/">Post Operative Care</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/injuries/">Injuries</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/manual-therapy/">Manual Therapy</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/vestibular-rehab-therapy/">Vestibular Rehab Therapy</a>
+</p></div><div style="clear:both;"></div></section><section id="custom_html-7" class="widget_text fusion-footer-widget-column widget widget_custom_html" style="border-style: solid;border-color:transparent;border-width:0px;"><h4 class="widget-title">PAY YOUR BILL</h4><div class="textwidget custom-html-widget"><a href="https://go.promptemr.com/payment?w=753" target="_blank">Click Here To Pay Your Bill Online</a></div><div style="clear:both;"></div></section>																					</div>
+																										<div class="fusion-column col-lg-4 col-md-4 col-sm-4">
+							<section id="custom_html-6" class="widget_text fusion-footer-widget-column widget widget_custom_html"><h4 class="widget-title">WHAT WE TREAT</h4><div class="textwidget custom-html-widget"><p class="footer-links">
+<a href="https://resolveptbend.com/services/post-operative-care/total-knee-replacement/">Total Knee Replacements</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/post-operative-care/total-hip-replacements/">Total Hip Replacements</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/post-operative-care/rotator-cuff-repairs/">Rotator Cuff Repairs</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/post-operative-care/acl-reconstructions/">ACL Reconstructions</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/post-operative-care/meniscus-repairs/">Meniscus Repairs</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/post-operative-care/achilles-repairs/">Achilles Repairs</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/injuries/lower-back-pain/">Lower back Pain</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/injuries/neck-pain/">Neck Pain</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/injuries/sports-injuries/">Sports Injuries</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/injuries/running-injuries/">Running Injuries</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/injuries/epicondylalgia/">Epicondylalgia</a>
+</p>
+<p class="footer-links">
+<a href="https://resolveptbend.com/services/conditions/"><i class="fas fa-angle-double-right"></i> View More Conditions</a>
+</p></div><div style="clear:both;"></div></section>																					</div>
+																										<div class="fusion-column fusion-column-last col-lg-4 col-md-4 col-sm-4">
+							<script type="text/javascript" id="google-maps-api-js-before">
+/* <![CDATA[ */
+function awbMapInit() {}
+//# sourceURL=google-maps-api-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpy-dI7hZZtviAgBMth4-53gK5b65xKRs&amp;language=en&amp;callback=awbMapInit&amp;ver=3.13.3" id="google-maps-api-js"></script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-content/themes/Avada/includes/lib/assets/min/js/library/infobox_packed.js?ver=3.13.3" id="google-maps-infobox-js"></script>
+<section id="custom_html-4" class="widget_text fusion-footer-widget-column widget widget_custom_html"><h4 class="widget-title">Contact Us</h4><div class="textwidget custom-html-widget">					<script type="text/javascript">
+						var map_fusion_map_69aaf0fad26eb;
+						var markers = [];
+						var counter = 0;
+																				var fusionMapNonce = '470f857c87';
+												function fusion_run_map_fusion_map_69aaf0fad26eb() {
+							jQuery ('#fusion_map_69aaf0fad26eb' ).fusion_maps( {
+								addresses: [{"address":"1740 NW Pence Ln Suite 5, Bend, OR 97703","infobox_content":"","coordinates":false,"cache":true,"latitude":"44.0633618","longitude":"-121.3389439"}],
+								animations: false,
+								infobox_background_color: '',
+								infobox_styling: '',
+								infobox_text_color: '',
+								map_style: '',
+								map_type: 'roadmap',
+								marker_icon: '',
+								overlay_color: '',
+								overlay_color_hsl: {"hue":0,"sat":0,"lum":100},
+								show_address: true,
+								scale_control: true,
+								scrollwheel: true,
+								zoom: 14,
+								zoom_control: true,
+							} );
+						}
+
+						google.maps.event.addDomListener(window, 'load', fusion_run_map_fusion_map_69aaf0fad26eb);
+					</script>
+					<div class="shortcode-map fusion-google-map fusion-maps-js-type" id="fusion_map_69aaf0fad26eb"></div>
+<p class="footer-links">
+	<a href="https://www.google.com/maps/dir/42.8787917,-112.4106411/resolve+pt+bend+or/@43.2280134,-121.3635724,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x54b8c9e9fd01ddbf:0x29e182fd062df344!2m2!1d-121.3389439!2d44.0633618">1740 NW Pence Ln Suite 5, Bend, OR 97703</a>
+</p>
+<p class="footer-links">
+	<a href="tel: 541-306-1099">Phone: (541) 306-1099</a></p>
+<p class="footer-links">
+	<a href="#">Fax: (541) 797-5016</a></p></div><div style="clear:both;"></div></section><section id="social_links-widget-2" class="fusion-footer-widget-column widget social_links">
+		<div class="fusion-social-networks">
+
+			<div class="fusion-social-networks-wrapper">
+																												
+						
+																																			<a class="fusion-social-network-icon fusion-tooltip fusion-facebook awb-icon-facebook" href="https://www.facebook.com/resolveptbend/"  data-placement="top" data-title="Facebook" data-toggle="tooltip" data-original-title=""  title="Facebook" aria-label="Facebook" rel="noopener noreferrer" target="_self" style="font-size:24px;color:#bebdbd;"></a>
+											
+										
+																				
+						
+																																			<a class="fusion-social-network-icon fusion-tooltip fusion-instagram awb-icon-instagram" href="https://www.instagram.com/resolveptbend/"  data-placement="top" data-title="Instagram" data-toggle="tooltip" data-original-title=""  title="Instagram" aria-label="Instagram" rel="noopener noreferrer" target="_self" style="font-size:24px;color:#bebdbd;"></a>
+											
+										
+				
+			</div>
+		</div>
+
+		<div style="clear:both;"></div></section>																					</div>
+																																				
+				<div class="fusion-clearfix"></div>
+			</div> <!-- fusion-columns -->
+		</div> <!-- fusion-row -->
+	</footer> <!-- fusion-footer-widget-area -->
+
+	
+	<footer id="footer" class="fusion-footer-copyright-area fusion-footer-copyright-center">
+		<div class="fusion-row">
+			<div class="fusion-copyright-content">
+
+				<div class="fusion-copyright-notice">
+		<div>
+		Copyright <script>new Date().getFullYear()>2010&&document.write(""+new Date().getFullYear());</script> | All Rights Reserved | Designed by <a href="https://zsdesign.net">ZS Design</a>	</div>
+</div>
+<div class="fusion-social-links-footer">
+	</div>
+
+			</div> <!-- fusion-fusion-copyright-content -->
+		</div> <!-- fusion-row -->
+	</footer> <!-- #footer -->
+		</div> <!-- fusion-footer -->
+
+		
+																</div> <!-- wrapper -->
+		</div> <!-- #boxed-wrapper -->
+				<a class="fusion-one-page-text-link fusion-page-load-link" tabindex="-1" href="#" aria-hidden="true">Page load link</a>
+
+		<div class="avada-footer-scripts">
+			<script type="text/javascript">var fusionNavIsCollapsed=function(e){var t,n;window.innerWidth<=e.getAttribute("data-breakpoint")?(e.classList.add("collapse-enabled"),e.classList.remove("awb-menu_desktop"),e.classList.contains("expanded")||window.dispatchEvent(new CustomEvent("fusion-mobile-menu-collapsed",{detail:{nav:e}})),(n=e.querySelectorAll(".menu-item-has-children.expanded")).length&&n.forEach((function(e){e.querySelector(".awb-menu__open-nav-submenu_mobile").setAttribute("aria-expanded","false")}))):(null!==e.querySelector(".menu-item-has-children.expanded .awb-menu__open-nav-submenu_click")&&e.querySelector(".menu-item-has-children.expanded .awb-menu__open-nav-submenu_click").click(),e.classList.remove("collapse-enabled"),e.classList.add("awb-menu_desktop"),null!==e.querySelector(".awb-menu__main-ul")&&e.querySelector(".awb-menu__main-ul").removeAttribute("style")),e.classList.add("no-wrapper-transition"),clearTimeout(t),t=setTimeout(()=>{e.classList.remove("no-wrapper-transition")},400),e.classList.remove("loading")},fusionRunNavIsCollapsed=function(){var e,t=document.querySelectorAll(".awb-menu");for(e=0;e<t.length;e++)fusionNavIsCollapsed(t[e])};function avadaGetScrollBarWidth(){var e,t,n,l=document.createElement("p");return l.style.width="100%",l.style.height="200px",(e=document.createElement("div")).style.position="absolute",e.style.top="0px",e.style.left="0px",e.style.visibility="hidden",e.style.width="200px",e.style.height="150px",e.style.overflow="hidden",e.appendChild(l),document.body.appendChild(e),t=l.offsetWidth,e.style.overflow="scroll",t==(n=l.offsetWidth)&&(n=e.clientWidth),document.body.removeChild(e),jQuery("html").hasClass("awb-scroll")&&10<t-n?10:t-n}fusionRunNavIsCollapsed(),window.addEventListener("fusion-resize-horizontal",fusionRunNavIsCollapsed);</script>
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/Avada/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div 
+	id="pum-109" 
+	role="dialog" 
+	aria-modal="false"
+	aria-labelledby="pum_popup_title_109"
+	class="pum pum-overlay pum-theme-102 pum-theme-default-theme popmake-overlay click_open" 
+	data-popmake="{&quot;id&quot;:109,&quot;slug&quot;:&quot;request-app-popup&quot;,&quot;theme_id&quot;:102,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-109" class="pum-container popmake theme-102 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+							<div id="pum_popup_title_109" class="pum-title popmake-title">
+				Request Appointment			</div>
+		
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			
+                <div class='gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_1' ><div id='gf_1' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_1' id='gform_1'  action='/wp-content/uploads/2021/04/parkinsons.jpeg#gf_1' data-formid='1' novalidate> 
+ <input type='hidden' class='gforms-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' />
+                        <div class='gform-body gform_body'><ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below validation_below'><li id="field_1_3" class="gfield gfield--type-text gfield--input-type-text gf_left_half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_3'>Name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_text'><input name='input_3' id='input_1_3' type='text' value='' class='medium'     aria-required="true" aria-invalid="false"   /></div></li><li id="field_1_4" class="gfield gfield--type-email gfield--input-type-email gf_right_half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_4'>Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_4' id='input_1_4' type='email' value='' class='medium'    aria-required="true" aria-invalid="false"  />
+                        </div></li><li id="field_1_5" class="gfield gfield--type-phone gfield--input-type-phone gf_left_half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_5'>Phone<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_phone'><input name='input_5' id='input_1_5' type='tel' value='' class='medium'   aria-required="true" aria-invalid="false"   /></div></li><li id="field_1_6" class="gfield gfield--type-date gfield--input-type-date gfield--input-type-datepicker gfield--datepicker-no-icon gf_right_half field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_6'>Preferred Date</label><div class='ginput_container ginput_container_date'>
+                            <input name='input_6' id='input_1_6' type='text' value='' class='datepicker gform-datepicker mdy datepicker_no_icon gdatepicker-no-icon'   placeholder='mm/dd/yyyy' aria-describedby="input_1_6_date_format" aria-invalid="false" />
+                            <span id='input_1_6_date_format' class='screen-reader-text'>MM slash DD slash YYYY</span>
+                        </div>
+                        <input type='hidden' id='gforms_calendar_icon_input_1_6' class='gform_hidden' value='https://resolveptbend.com/wp-content/plugins/gravityforms/images/datepicker/datepicker.svg'/></li><li id="field_1_7" class="gfield gfield--type-time gfield--input-type-time field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label gfield_label_before_complex' >Preferred Time</label><div class="ginput_container ginput_complex gform-grid-row"><div class="clear-multi">
+                        <div class='gfield_time_hour ginput_container ginput_container_time gform-grid-col' id='input_1_7'>
+                            <input type='number' name='input_7[]' id='input_1_7_1' value=''  min='0' max='12' step='1'  placeholder='HH' aria-required='false'   /> <i>:</i>
+                            <label class='gform-field-label gform-field-label--type-sub hour_label screen-reader-text' for='input_1_7_1'>Hours</label>
+                        </div>
+                        
+                        <div class='gfield_time_minute ginput_container ginput_container_time gform-grid-col'>
+                            <input type='number' name='input_7[]' id='input_1_7_2' value=''  min='0' max='59' step='1'  placeholder='MM' aria-required='false'  />
+                            <label class='gform-field-label gform-field-label--type-sub minute_label screen-reader-text' for='input_1_7_2'>Minutes</label>
+                        </div>
+                        <div class='gfield_time_ampm ginput_container ginput_container_time below gform-grid-col' >
+                                
+                                <select name='input_7[]' id='input_1_7_3'  >
+                                    <option value='am' >AM</option>
+                                    <option value='pm' >PM</option>
+                                </select> 
+                                <label class='gform-field-label gform-field-label--type-sub am_pm_label screen-reader-text' for='input_1_7_3'>AM/PM</label>                                
+                           </div>
+                    </div></div></li></ul></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_1' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Submit'  /> <input type='hidden' name='gform_ajax' value='form_id=1&amp;title=&amp;description=&amp;tabindex=0&amp;theme=legacy&amp;styles=[]&amp;hash=0680fb7f268b10170afe929e534c5f8d' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_1' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_1' id='gform_theme_1' value='legacy' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_1' id='gform_style_settings_1' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='USD' value='cyjOJ7kr4W7/Pny+0/1fbJkLlNa43QyEcmrUAETo6dxhGTcb3Ws68NXC/fgzsp1ENx3yGQkER4nu6krhQc8nErqoc8C4kBRbJUpjcgRnPR6N8kI=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsImMzMDgyY2RlMjJiMTczNTIwMThiNDZhNGE5ZWFkMjY5Il0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_1' id='gform_ajax_frame_1' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {gformInitSpinner( 1, 'https://resolveptbend.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_1').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_1');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_1').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_1').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_1').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_1').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_1').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_1').val();gformInitSpinner( 1, 'https://resolveptbend.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [1, current_page]);window['gf_submitting_1'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_1').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_1').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [1]);window['gf_submitting_1'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_1').text());}else{jQuery('#gform_1').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "1", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_1" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_1";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_1" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 1, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} ); 
+/* ]]> */
+</script>
+
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			CLOSE			</button>
+		
+	</div>
+
+</div>
+<script type="text/javascript" src="https://resolveptbend.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.4" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/resolveptbend.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.4" id="contact-form-7-js"></script>
+<script type="text/javascript" src="//resolveptbend.com/wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.37" defer async id="tp-tools-js"></script>
+<script type="text/javascript" src="//resolveptbend.com/wp-content/plugins/revslider/sr6/assets/js/rs6.min.js?ver=6.7.37" defer async id="revmin-js"></script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-includes/js/dist/a11y.min.js?ver=cb460b4676c94bd228ed" id="wp-a11y-js"></script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3" id="jquery-ui-datepicker-js"></script>
+<script type="text/javascript" id="jquery-ui-datepicker-js-after">
+/* <![CDATA[ */
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+//# sourceURL=jquery-ui-datepicker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://resolveptbend.com/wp-content/plugins/gravityforms/js/datepicker-legacy.min.js?ver=2.9.28" id="gform_datepicker_legacy-js"></script>
+<script type="text/javascript" defer='defer' src="https://resolveptbend.com/wp-content/plugins/gravityforms/js/datepicker.min.js?ver=2.9.28" id="gform_datepicker_init-js"></script>
+<script type="text/javascript" defer='defer' src="https://resolveptbend.com/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js?ver=2.9.28" id="gform_masked_input-js"></script>
+<script type="text/javascript" defer='defer' src="https://resolveptbend.com/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=4f8b3915c1c1e1a6800825abd64b03cb" id="gform_gravityforms_theme_vendors-js"></script>
+<script type="text/javascript" id="gform_gravityforms_theme-js-extra">
+/* <![CDATA[ */
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"68cec33af2c7d50ed3aed273bc3f264d"},"ajax":{"ajaxurl":"https://resolveptbend.com/wp-admin/admin-ajax.php","ajax_submission_nonce":"172713d5f9","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https://resolveptbend.com/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"2d14509147"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://resolveptbend.com/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=f5bd645c6a32e28f79908d2601a4d932" id="gform_gravityforms_theme-js"></script>
+<script type="text/javascript" id="popup-maker-site-js-extra">
+/* <![CDATA[ */
+var pum_vars = {"version":"1.21.5","pm_dir_url":"https://resolveptbend.com/wp-content/plugins/popup-maker/","ajaxurl":"https://resolveptbend.com/wp-admin/admin-ajax.php","restapi":"https://resolveptbend.com/wp-json/pum/v1","rest_nonce":null,"default_theme":"102","debug_mode":"","disable_tracking":"","home_url":"/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","analytics_enabled":"1","analytics_route":"analytics","analytics_api":"https://resolveptbend.com/wp-json/pum/v1"};
+var pum_sub_vars = {"ajaxurl":"https://resolveptbend.com/wp-admin/admin-ajax.php","message_position":"top"};
+var pum_popups = {"pum-109":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"102","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":0,"close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"default-theme","id":109,"slug":"request-app-popup"}};
+//# sourceURL=popup-maker-site-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="//resolveptbend.com/wp-content/uploads/pum/pum-site-scripts.js?defer&amp;generated=1751984153&amp;ver=1.21.5" id="popup-maker-site-js"></script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=14.2.3.2" id="__ytprefsfitvids__-js"></script>
+<script type="text/javascript" src="https://resolveptbend.com/wp-content/uploads/fusion-scripts/36adf46bae4f2f49be1ad77e392ce167.min.js?ver=3.13.3" id="fusion-scripts-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://resolveptbend.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://resolveptbend.com/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+				<script type="text/javascript">
+				jQuery( document ).ready( function() {
+					var ajaxurl = 'https://resolveptbend.com/wp-admin/admin-ajax.php';
+					if ( 0 < jQuery( '.fusion-login-nonce' ).length ) {
+						jQuery.get( ajaxurl, { 'action': 'fusion_login_nonce' }, function( response ) {
+							jQuery( '.fusion-login-nonce' ).html( response );
+						});
+					}
+				});
+				</script>
+				<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/resolveptbend.com"}]}</script><script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 1) {jQuery('#input_1_5').mask('(999) 999-9999').bind('keypress', function(e){if(e.which == 13){jQuery(this).blur();} } );} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } ); 
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "1", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_1" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_1";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_1" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 1, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } ); 
+/* ]]> */
+</script>
+		</div>
+
+			<section class="to-top-container to-top-right" aria-labelledby="awb-to-top-label">
+		<a href="#" id="toTop" class="fusion-top-top-link">
+			<span id="awb-to-top-label" class="screen-reader-text">Go to Top</span>
+
+					</a>
+	</section>
+		</body>
+</html>

@@ -177,6 +177,60 @@
             background: #2A8F8F;
             color: #FFFFFF;
         }
+
+        .badge-final {
+            background: #E07C4F;
+            color: #FFFFFF;
+        }
+
+        .card-featured {
+            border: 2px solid #E07C4F;
+            background: linear-gradient(135deg, #FFFFFF 0%, #FFF8F5 100%);
+            position: relative;
+            grid-column: 1 / -1;
+        }
+
+        .card-featured::before {
+            content: 'RECOMMENDED';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #E07C4F;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            padding: 3px 10px;
+            border-radius: 4px;
+        }
+
+        .card-featured .card-link {
+            color: #E07C4F;
+        }
+
+        .card-featured:hover {
+            border-color: #c5623a;
+        }
+
+        .card-featured:hover .card-link {
+            color: #c5623a;
+        }
+
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            background: #F3F4F6;
+            color: #374151;
+        }
     </style>
 </head>
 
@@ -187,6 +241,30 @@
             <p class="lead">Select a visual identity iteration below to preview the live, high-fidelity landing page for
                 Resolve Physical Therapy.</p>
         </header>
+
+        <!-- FINAL DESIGN — Recommended -->
+        <div class="grid" style="margin-bottom: 2rem;">
+            <a href="concepts/resolve-pt-final.html" class="card card-featured">
+                <span class="card-badge badge-final">Final Design</span>
+                <h2>The Definitive Resolve PT Website</h2>
+                <p>Market-researched, data-driven hybrid combining the best of all three concepts. Active Performance energy + PNW Warmth authenticity + Clinical Trust depth. Real team photos, full bios, dark mode, Ken Burns hero, parallax, animated stats, FAQ schema, Shockwave Therapy, and 16 production-quality sections.</p>
+                <div class="features-list">
+                    <span class="feature-tag">Dark Mode</span>
+                    <span class="feature-tag">Ken Burns Hero</span>
+                    <span class="feature-tag">Parallax</span>
+                    <span class="feature-tag">Schema.org</span>
+                    <span class="feature-tag">FAQ Accordion</span>
+                    <span class="feature-tag">Real Photos</span>
+                    <span class="feature-tag">WCAG AA</span>
+                    <span class="feature-tag">Mobile-First</span>
+                </div>
+                <div class="card-link">View Final Design <span aria-hidden="true">&rarr;</span></div>
+            </a>
+        </div>
+
+        <div class="section-divider">
+            <span>Version 1 — Original Concepts</span>
+        </div>
 
         <div class="grid">
             <!-- Option 1: PNW Warmth -->
