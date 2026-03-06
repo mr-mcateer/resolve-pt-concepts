@@ -21,13 +21,16 @@
         content="Dedicated one-on-one physical therapy for post-surgical recovery, chronic pain, and vestibular rehabilitation in Bend, Oregon.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://resolveptbend.com/clinical-care">
-    <meta property="og:image" content="https://resolveptbend.com/images/clinic_performance.png">
+    <meta property="og:image" content="https://resolveptbend.com/images/resolve-logo-horizontal.png">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Expert Orthopedic PT | Resolve Physical Therapy Bend">
     <meta name="twitter:description"
         content="Expert care. One patient at a time. Post-surgical, chronic pain, and vestibular therapy in Bend, Oregon.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/resolve-logo-stacked.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,6 +92,8 @@
         "https://www.instagram.com/resolveptbend",
         "https://g.page/resolveptbend"
       ],
+      "image": "https://resolveptbend.com/images/resolve-logo-horizontal.png",
+      "logo": "https://resolveptbend.com/images/resolve-logo-horizontal.png",
       "medicalSpecialty": ["Orthopedic", "PhysicalTherapy"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -110,6 +115,10 @@
            CSS CUSTOM PROPERTIES / DESIGN TOKENS
            ============================================ */
         :root {
+            /* Brand identity (from official logo) */
+            --brand-dark: #283B45;
+            --brand-blue: #8CC6EC;
+
             --bg-primary: #FFFFFF;
             --bg-secondary: #F5F4F1;
             --text-primary: #2F3640;
@@ -122,6 +131,17 @@
             --border-color: #E2E8F0;
             --font-heading: 'Lora', Georgia, 'Times New Roman', serif;
             --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+            /* Fluid type scale */
+            --fs-xs:    clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+            --fs-sm:    clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+            --fs-base:  clamp(1rem,     0.9rem  + 0.5vw,  1.125rem);
+            --fs-md:    clamp(1.125rem, 1rem    + 0.6vw,  1.35rem);
+            --fs-lg:    clamp(1.35rem,  1.1rem  + 1.1vw,  1.75rem);
+            --fs-xl:    clamp(1.75rem,  1.3rem  + 2vw,    2.5rem);
+            --fs-2xl:   clamp(2.25rem,  1.5rem  + 3.5vw,  3.75rem);
+            --fs-3xl:   clamp(3rem,     2rem    + 4.5vw,  5rem);
+
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 2rem;
@@ -130,8 +150,12 @@
             --navbar-height: 72px;
             --transition-base: 0.2s ease;
             --transition-smooth: 0.5s ease;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+            /* Tinted shadow system */
+            --shadow-sm: 0 1px 3px hsla(195, 20%, 20%, 0.06), 0 1px 2px hsla(195, 20%, 20%, 0.04);
+            --shadow-md: 0 4px 12px hsla(195, 20%, 20%, 0.08), 0 2px 4px hsla(195, 20%, 20%, 0.04);
+            --shadow-lg: 0 12px 32px hsla(195, 20%, 20%, 0.1), 0 4px 8px hsla(195, 20%, 20%, 0.06);
+
             --radius-sm: 4px;
             --radius-md: 8px;
             --radius-lg: 12px;
@@ -220,6 +244,9 @@
             color: var(--text-primary);
         }
 
+        h1, h2, h3, blockquote { text-wrap: balance; }
+        p, li { text-wrap: pretty; }
+
         h1 {
             font-size: clamp(2.25rem, 5vw, 3.5rem);
             margin-bottom: var(--space-sm);
@@ -275,6 +302,37 @@
         }
 
         /* ============================================
+           SCROLL PROGRESS BAR
+           ============================================ */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-primary);
+            transform-origin: left;
+            transform: scaleX(0);
+            z-index: 10001;
+        }
+
+        /* ============================================
+           SUBTLE NOISE TEXTURE ON ALTERNATE SECTIONS
+           ============================================ */
+        .section-gray { position: relative; }
+        .section-gray::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 256px 256px;
+        }
+
+        /* ============================================
            BUTTONS
            ============================================ */
         .btn {
@@ -303,6 +361,7 @@
             background-color: var(--accent-primary);
             color: #fff;
             border-color: var(--accent-primary);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         .btn-primary:hover {
@@ -315,6 +374,7 @@
             background-color: transparent;
             border: 2px solid var(--text-primary);
             color: var(--text-primary);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         .btn-secondary:hover {
@@ -363,6 +423,9 @@
 
         .navbar.scrolled {
             box-shadow: var(--shadow-sm);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(255, 255, 255, 0.92);
         }
 
         .navbar .container {
@@ -373,17 +436,20 @@
         }
 
         .navbar-brand {
-            font-family: var(--font-heading);
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: var(--text-primary);
             text-decoration: none;
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
         }
 
         .navbar-brand:hover {
-            color: var(--text-primary);
             text-decoration: none;
+        }
+
+        .navbar-logo {
+            height: 42px;
+            width: auto;
+            display: block;
         }
 
         .navbar-center {
@@ -733,7 +799,7 @@
             top: 28px;
             left: calc(16.66% + 24px);
             height: 2px;
-            background: var(--accent-primary);
+            background: linear-gradient(90deg, var(--brand-blue), var(--accent-primary));
             z-index: 1;
             width: 0;
             transition: width 1s ease;
@@ -1245,6 +1311,13 @@
             margin-bottom: 1.25rem;
         }
 
+        .footer-logo {
+            height: 36px;
+            width: auto;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
         .footer-social {
             display: flex;
             justify-content: center;
@@ -1339,6 +1412,10 @@
             .approach-line-fill {
                 transition: none;
                 width: calc(100% - 33.33% - 48px) !important;
+            }
+
+            .scroll-progress {
+                transition: none;
             }
 
             .btn,
@@ -1515,6 +1592,8 @@
 </head>
 
 <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
     <!-- Skip to content -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -1523,7 +1602,9 @@
          ============================================ -->
     <header class="navbar" role="banner">
         <div class="container">
-            <a href="/" class="navbar-brand">Resolve Physical Therapy</a>
+            <a href="#" class="navbar-brand" aria-label="Resolve Physical Therapy Home">
+                <img src="../images/resolve-logo-horizontal.png" alt="Resolve Physical Therapy" class="navbar-logo" width="220" height="auto">
+            </a>
 
             <nav class="navbar-center" aria-label="Main Navigation">
                 <a href="#services">Services</a>
@@ -1734,7 +1815,7 @@
         <!-- ============================================
              OUR APPROACH (3-Step Process)
              ============================================ -->
-        <section id="approach" class="approach-section" aria-labelledby="approach-heading">
+        <section id="approach" class="approach-section section-gray" aria-labelledby="approach-heading">
             <div class="container text-center">
                 <h2 id="approach-heading">Our Approach to Your Recovery</h2>
 
@@ -1931,7 +2012,7 @@
         <!-- ============================================
              PATIENT RESOURCES
              ============================================ -->
-        <section id="resources" class="resources-section" aria-labelledby="resources-heading">
+        <section id="resources" class="resources-section section-gray" aria-labelledby="resources-heading">
             <div class="container">
                 <h2 id="resources-heading" class="text-center">Patient Resources</h2>
 
@@ -2070,7 +2151,9 @@
          ============================================ -->
     <footer class="footer" role="contentinfo">
         <div class="container">
-            <p class="footer-brand">Resolve Physical Therapy</p>
+            <p class="footer-brand">
+                <img src="../images/resolve-logo-horizontal.png" alt="Resolve Physical Therapy" class="footer-logo" width="200" height="auto">
+            </p>
 
             <div class="footer-social">
                 <!-- Facebook -->
@@ -2116,6 +2199,18 @@
         // Check for reduced motion preference
         // ------------------------------------------
         var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // ------------------------------------------
+        // Scroll progress bar
+        // ------------------------------------------
+        var progressBar = document.querySelector('.scroll-progress');
+        if (progressBar) {
+            window.addEventListener('scroll', function () {
+                var scrollTop = document.documentElement.scrollTop;
+                var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                progressBar.style.transform = 'scaleX(' + (scrollTop / scrollHeight) + ')';
+            }, { passive: true });
+        }
 
         // ------------------------------------------
         // Navbar scroll shadow

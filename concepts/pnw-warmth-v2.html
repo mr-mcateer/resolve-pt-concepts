@@ -56,6 +56,8 @@
     "founder": {"@type": "Person", "name": "Jenny McAteer"},
     "foundingDate": "2018",
     "paymentAccepted": "Insurance, Medicare, Medicaid/OHP",
+    "image": "https://resolveptbend.com/images/resolve-logo-horizontal.png",
+    "logo": "https://resolveptbend.com/images/resolve-logo-horizontal.png",
     "areaServed": {"@type": "City", "name": "Bend, Oregon"},
     "sameAs": [
       "https://www.facebook.com/resolveptbend",
@@ -77,6 +79,9 @@
   }
   </script>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/resolve-logo-stacked.png">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,17 +92,29 @@
        DESIGN TOKENS
        ============================================ */
     :root {
+      /* Brand Identity Colors */
+      --brand-dark: #283B45;
+      --brand-blue: #8CC6EC;
+
       /* Colors */
       --bg-primary: #FAF7F2;
-      --text-primary: #1E2D2B;
+      --text-primary: #283B45;
       --accent-sage: #7A9A8E;
       --accent-clay: #C4836A;
       --bg-stone: #E8E2D9;
       --white: #FFFFFF;
 
-      /* Typography */
+      /* Typography — Fluid Type Scale */
       --font-heading: 'Outfit', sans-serif;
       --font-body: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+      --fs-xs:    clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+      --fs-sm:    clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+      --fs-base:  clamp(1rem,     0.9rem  + 0.5vw,  1.125rem);
+      --fs-md:    clamp(1.125rem, 1rem    + 0.6vw,  1.35rem);
+      --fs-lg:    clamp(1.35rem,  1.1rem  + 1.1vw,  1.75rem);
+      --fs-xl:    clamp(1.75rem,  1.3rem  + 2vw,    2.5rem);
+      --fs-2xl:   clamp(2.25rem,  1.5rem  + 3.5vw,  3.75rem);
+      --fs-3xl:   clamp(3rem,     2rem    + 4.5vw,  5rem);
 
       /* Spacing */
       --space-xs: 0.5rem;
@@ -111,6 +128,12 @@
       --radius-md: 8px;
       --radius-lg: 16px;
       --radius-pill: 9999px;
+
+      /* Shadows — HSL-tinted to match brand */
+      --shadow-sm: 0 1px 3px hsla(200, 20%, 20%, 0.06), 0 1px 2px hsla(200, 20%, 20%, 0.04);
+      --shadow-md: 0 4px 12px hsla(200, 20%, 20%, 0.08), 0 2px 4px hsla(200, 20%, 20%, 0.04);
+      --shadow-lg: 0 12px 32px hsla(200, 20%, 20%, 0.1), 0 4px 8px hsla(200, 20%, 20%, 0.06);
+      --shadow-xl: 0 24px 48px hsla(200, 20%, 20%, 0.12), 0 8px 16px hsla(200, 20%, 20%, 0.06);
 
       /* Transitions */
       --transition-fast: 0.3s ease;
@@ -149,6 +172,9 @@
     h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); }
     h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); margin-bottom: var(--space-md); }
     h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); margin-bottom: var(--space-sm); }
+
+    h1, h2, h3, blockquote { text-wrap: balance; }
+    p, li { text-wrap: pretty; }
 
     p { margin-bottom: var(--space-sm); }
 
@@ -223,6 +249,10 @@
       line-height: 1.4;
     }
 
+    .btn-primary, .btn-secondary {
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
     .btn-primary {
       background-color: var(--accent-clay);
       color: var(--white);
@@ -276,9 +306,10 @@
       top: 0;
       width: 100%;
       padding: var(--space-sm) 0;
-      background-color: rgba(250, 247, 242, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(250, 247, 242, 0.85);
+      border-bottom: 1px solid rgba(232, 226, 217, 0.5);
       z-index: 1000;
       transition: box-shadow var(--transition-fast);
     }
@@ -293,12 +324,18 @@
       align-items: center;
     }
 
-    .navbar-brand a {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: -0.01em;
+    .navbar-logo {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .footer-logo {
+      height: auto;
+      width: 150px;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto var(--space-sm);
     }
 
     .nav-links {
@@ -1080,6 +1117,45 @@
     }
 
     /* ============================================
+       SCROLL PROGRESS BAR
+       ============================================ */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--accent-clay);
+      transform-origin: left;
+      transform: scaleX(0);
+      z-index: 10001;
+      transition: none;
+    }
+
+    /* ============================================
+       HERO NOISE TEXTURE OVERLAY
+       ============================================ */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 1;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px 256px;
+    }
+
+    /* ============================================
+       ENHANCED CARD HOVER SHADOWS
+       ============================================ */
+    .diff-card:hover, .service-card:hover, .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* ============================================
        ANIMATIONS — Reduced Motion
        ============================================ */
     @media (prefers-reduced-motion: reduce) {
@@ -1124,6 +1200,8 @@
 </head>
 
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <!-- Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -1132,9 +1210,9 @@
        ============================================= -->
   <header class="navbar" role="banner">
     <div class="container">
-      <div class="navbar-brand">
-        <a href="#" aria-label="Resolve Physical Therapy Home">Resolve</a>
-      </div>
+      <a href="#" class="navbar-brand" aria-label="Resolve Physical Therapy Home">
+        <img src="../images/resolve-logo-horizontal.png" alt="Resolve Physical Therapy" class="navbar-logo" width="200" height="auto">
+      </a>
       <nav class="nav-links" aria-label="Main Navigation">
         <a href="#services">Services</a>
         <a href="#team">Our Team</a>
@@ -1477,6 +1555,7 @@
        ============================================= -->
   <footer class="footer" role="contentinfo">
     <div class="container footer-content">
+      <img src="../images/resolve-logo-stacked.png" alt="Resolve Physical Therapy" class="footer-logo" width="150" height="auto">
       <h2>Resolve<br>Physical Therapy</h2>
       <p class="footer-tagline">Bend, Oregon | Founded 2018</p>
 
@@ -1710,6 +1789,40 @@
               submitBtn.disabled = false;
               form.reset();
             }, 3000);
+          });
+        }
+
+        // ─────────────────────────────────────────
+        // 8. Scroll Progress Bar
+        // ─────────────────────────────────────────
+        var progressBar = document.querySelector('.scroll-progress');
+        if (progressBar) {
+          window.addEventListener('scroll', function() {
+            var scrollTop = document.documentElement.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var progress = scrollTop / scrollHeight;
+            progressBar.style.transform = 'scaleX(' + progress + ')';
+          }, { passive: true });
+        }
+
+        // ─────────────────────────────────────────
+        // 9. Magnetic Button Effect
+        // ─────────────────────────────────────────
+        if (!prefersReducedMotion) {
+          document.querySelectorAll('.btn-primary, .btn-secondary').forEach(function(btn) {
+            btn.addEventListener('mousemove', function(e) {
+              var rect = btn.getBoundingClientRect();
+              var x = e.clientX - rect.left - rect.width / 2;
+              var y = e.clientY - rect.top - rect.height / 2;
+              btn.style.transform = 'translate(' + (x * 0.2) + 'px, ' + (y * 0.2) + 'px)';
+            });
+            btn.addEventListener('mouseleave', function() {
+              btn.style.transform = '';
+              btn.style.transition = 'all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            });
+            btn.addEventListener('mouseenter', function() {
+              btn.style.transition = 'all 0.15s ease';
+            });
           });
         }
 
