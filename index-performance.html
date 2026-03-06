@@ -4,197 +4,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resolve Performance PT | Bend, OR</title>
-    <meta name="description" content="Evidence-based physical therapy for runners, skiers, and active humans in Bend.">
+    <title>Resolve Performance PT | Bend, OR | Evidence-Based Rehab</title>
+    <meta name="description"
+        content="Resolve Performance Physical Therapy in Bend, Oregon. Get back to the trails with our evidence-based sports injury rehabilitation and running gait analysis.">
     <link rel="stylesheet" href="css/performance.css">
+
+    <!-- Preload Critical Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Script immediately evaluated to prevent Flash Of Unstyled Content (FOUC) on Dark Mode -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <header class="navbar">
+    <!-- Screen Reader Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header / Navigation -->
+    <header class="navbar" role="banner">
         <div class="container">
             <div class="navbar-brand">
-                <a href="/">RESOLVE <span
-                        style="font-weight:400; font-family:var(--font-body); font-size:1rem; letter-spacing:0.15em;">PT</span></a>
+                <a href="/" aria-label="Resolve PT Home">RESOLVE <span
+                        style="font-weight:700; font-family:var(--font-body); font-size:1.1rem; letter-spacing:0.15em;">PT</span></a>
             </div>
+
             <nav class="nav-links" aria-label="Main Navigation">
                 <a href="#running" class="nav-item">Running Rehab</a>
                 <a href="#services" class="nav-item">Services</a>
                 <a href="#team" class="nav-item">Team</a>
-                <a href="tel:5413061099" class="nav-item" style="color:var(--accent-orange);">(541) 306-1099</a>
-                <a href="#book" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Schedule</a>
+
+                <!-- Accessibility: Underline and high contrast -->
+                <a href="tel:5413061099" class="nav-item" aria-label="Call clinic at 541 306 1099"
+                    style="color:var(--accent-secondary); font-weight:800; text-decoration: underline; text-underline-offset: 4px;">
+                    <svg style="width:16px; height:16px; margin-right:4px;" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    (541) 306-1099
+                </a>
+
+                <a href="#book" class="btn btn-primary">Schedule</a>
+
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <!-- Handled heavily via JS matching -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
             </nav>
+
+            <!-- Mobile Nav Toggle (Visual Only) -->
+            <button class="mobile-toggle" aria-label="Open Mobile Menu" aria-expanded="false"
+                aria-controls="mobile-nav">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="overflow:hidden;">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1>Get back to the trail.<br>Stay on it.</h1>
-                <p>Evidence-based physical therapy for runners, skiers, and active humans in Bend. We focus on outcomes
-                    over promises, using biometric data to find the root of the injury.</p>
-                <div style="display:flex; gap:1rem; margin-top:2rem;">
-                    <a href="#book" class="btn btn-primary">Book Your Assessment</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main id="main-content" role="main">
 
-    <!-- Stat Bar -->
-    <section class="stat-bar">
-        <div class="container stat-grid">
-            <div class="stat-item">
-                <div class="stat-number" data-target="2018">0</div>
-                <div class="stat-label">Est. Year</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="100">0</div>
-                <div class="stat-label">% 1:1 Care Every Visit</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="4">0</div>
-                <div class="stat-label">Specialized DPTs</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Running Rehab Spotlight -->
-    <section id="running" class="section">
-        <div class="container spotlight-container">
-            <div class="spotlight-image">
-                <!-- New Clinic image -->
-                <img src="images/clinic_performance.png" alt="Clinical gait analysis and manual therapy in Bend">
-            </div>
-            <div class="spotlight-content">
-                <h2>Running Rehab That Goes Beyond 'Rest and Ice'</h2>
-                <p>We combine advanced Video Gait Analysis, DorsaVi wearable sensors, and elite biomechanical
-                    assessment. Rest doesn't fix dysfunction. We measure the data so you know exactly what breaks down
-                    when you run.</p>
-                <p>This is Resolve's flagship offering. We find the source of your Achilles, knee, or IT band issue and
-                    rebuild your stride mechanics dynamically.</p>
-                <a href="#book" class="link-green" style="margin-top:1.5rem;">Book a Running Assessment &rarr;</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- All Services -->
-    <section id="services" class="section bg-dark">
-        <div class="container">
-            <h2 style="text-align:center; margin-bottom:var(--space-xl);">All Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Post-Op Rehab</h3>
-                    <p>Meticulous protocol tracking for ACLs, joint replacements, and shoulder operations to ensure
-                        proper strength recovery without regression.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Injury Treatment</h3>
-                    <p>Targeted relief for acute sports injuries, muscular strains, and sprains.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Manual Therapy</h3>
-                    <p>Deep tissue manipulation and joint mobilizations customized for athletes to break down scar
-                        tissue and restore mobility.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Running Rehab</h3>
-                    <p>Kinematic tracking utilizing DorsaVi sensors and video motion capture exclusively.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Vestibular/Vertigo</h3>
-                    <p>Neurological repositioning to solve dizziness directly at the source.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Chronic Pain</h3>
-                    <p>System-wide evaluations addressing compensatory movement patterns resulting in prolonged pain.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Team -->
-    <section id="team" class="section">
-        <div class="container">
-            <h2 style="margin-bottom: var(--space-xl);">The Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <!-- Utilizing the previous portrait but CSS applied grayscale contrast -->
-                    <img src="images/jenny_portrait.png" alt="Jenny McAteer" class="team-photo">
-                    <div class="team-info">
-                        <h3>Jenny McAteer</h3>
-                        <div class="team-role">OWNER & FOUNDER / DPT</div>
-                        <p class="team-bio">Jenny pioneers the use of DorsaVi sensors for running rehab. She built
-                            Resolve as an anti-corporate space where athletes get exactly what they need.</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Nate Palmer" class="team-photo">
-                    <div class="team-info">
-                        <h3>Nate Palmer</h3>
-                        <div class="team-role">ENDURANCE SPECIALIST / DPT</div>
-                        <p class="team-bio">Nate thru-hiked the entire PCT. His clinical approach is informed by
-                            enduring the same grueling miles his patients want to return to.</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Kasey Lohman" class="team-photo">
-                    <div class="team-info">
-                        <h3>Kasey Lohman</h3>
-                        <div class="team-role">SPORTS REHAB / DPT</div>
-                        <p class="team-bio">Kasey specializes in collegiate and high school athlete recovery, bringing
-                            high-end sports science to the local community.</p>
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-heading">Get back to the trail.<br>Stay on it.</h1>
+                    <p>Evidence-based physical therapy for runners, skiers, and active humans in Bend. We focus on
+                        outcomes over promises, using biometric data to find the root of the injury.</p>
+                    <div class="hero-ctas">
+                        <a href="#book" class="btn btn-primary" aria-label="Book your assessment now">Book Your
+                            Assessment</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Patient Proof -->
-    <section class="section bg-dark" style="padding-top:var(--space-xl); padding-bottom:var(--space-xl);">
-        <div class="container testimonial-container">
-            <div class="testimonial-text">"Nate helped me rehab my torn Achilles back to running shape when I thought I
-                would never get there again."</div>
-            <div class="testimonial-author">JENNIFER M. &mdash; RUNNER</div>
-        </div>
-    </section>
-
-    <!-- CTA Booking -->
-    <section id="book" class="cta-bar">
-        <div class="container cta-flex">
-            <h2>READY TO MOVE BETTER?</h2>
-            <div style="display:flex; gap:1rem;">
-                <a href="#book" class="btn btn-outline">Schedule Appointment</a>
-                <a href="tel:5413061099" class="btn" style="background:var(--white); color:var(--text-dark);">Call (541)
-                    306-1099</a>
+        <!-- Stat Bar (ARIA Accessible) -->
+        <section class="stat-bar" aria-label="Clinic Statistics">
+            <div class="container stat-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="2018" aria-live="polite">2018</div>
+                    <div class="stat-label">Established</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100" aria-live="polite">100</div>
+                    <div class="stat-label">% 1:1 Care Guarantee</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="4" aria-live="polite">4</div>
+                    <div class="stat-label">Specialist DPTs</div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Running Rehab Spotlight -->
+        <section id="running" class="section" aria-labelledby="running-heading">
+            <div class="container spotlight-container">
+                <div class="spotlight-image">
+                    <img src="images/clinic_performance.png"
+                        alt="Female physical therapist performing sports-specific manual therapy on the hamstring of a male athlete lying on a treatment table"
+                        loading="lazy">
+                </div>
+                <div class="spotlight-content">
+                    <h2 id="running-heading">Running Rehab That Goes Beyond 'Rest and Ice'</h2>
+                    <p>We combine advanced Video Gait Analysis, DorsaVi wearable sensors, and elite biomechanical
+                        assessment. Rest doesn't fix dysfunction. We measure the data so you know exactly what breaks
+                        down when you run.</p>
+                    <p>This is Resolve's flagship offering. We find the source of your Achilles, knee, or IT band issue
+                        and rebuild your stride mechanics dynamically.</p>
+
+                    <ul class="feature-list" aria-label="Running Rehab Features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Video Gait Analysis</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>DorsaVi Wearable Biomechanics</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Force Output Testing</span>
+                        </li>
+                    </ul>
+
+                    <a href="#book" class="btn btn-secondary" style="margin-top:1rem;">Book a Running Assessment</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Services -->
+        <section id="services" class="section bg-inverse" aria-labelledby="services-heading">
+            <div class="container">
+                <h2 id="services-heading" style="text-align:center;">All Services</h2>
+                <div class="services-grid">
+
+                    <div class="service-card" tabindex="0">
+                        <h3>
+                            <div class="service-icon" aria-hidden="true">1</div> Post-Op Rehab
+                        </h3>
+                        <p>Meticulous protocol tracking for ACLs, joint replacements, and shoulder operations to ensure
+                            proper strength recovery without regression.</p>
+                    </div>
+
+                    <div class="service-card" tabindex="0">
+                        <h3>
+                            <div class="service-icon" aria-hidden="true">2</div> Injury Treatment
+                        </h3>
+                        <p>Targeted relief for acute sports injuries, muscular strains, and sprains with hands-on manual
+                            manipulation.</p>
+                    </div>
+
+                    <div class="service-card" tabindex="0">
+                        <h3>
+                            <div class="service-icon" aria-hidden="true">3</div> Manual Therapy
+                        </h3>
+                        <p>Deep tissue mobilization customized for athletes to break down scar tissue, increase
+                            bloodflow, and restore mobility rapidly.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- The Team -->
+        <section id="team" class="section" aria-labelledby="team-heading">
+            <div class="container">
+                <h2 id="team-heading">The Team</h2>
+                <div class="team-grid">
+                    <!-- Jenny -->
+                    <article class="team-member" aria-labelledby="jenny-name">
+                        <img src="images/jenny_portrait.png" alt="Jenny McAteer, Clinic Founder, standing in clinic"
+                            class="team-photo" loading="lazy">
+                        <div class="team-info">
+                            <span class="team-role">OWNER / DPT</span>
+                            <h3 id="jenny-name">Jenny McAteer</h3>
+                            <p class="team-bio">Jenny pioneers the use of DorsaVi sensors for running rehab. She built
+                                Resolve as an anti-corporate space where athletes get exactly what they need.</p>
+                        </div>
+                    </article>
+                    <!-- Nate -->
+                    <article class="team-member" aria-labelledby="nate-name">
+                        <div style="background-color: var(--border-color);" class="team-photo">
+                            <!-- Fallback solid color block since Unsplash was removed, keeping grid intact -->
+                        </div>
+                        <div class="team-info">
+                            <span class="team-role">ENDURANCE / DPT</span>
+                            <h3 id="nate-name">Nate Palmer</h3>
+                            <p class="team-bio">Nate thru-hiked the entire PCT. His clinical approach is informed by
+                                enduring the same grueling miles his patients want to return to.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA & Book -->
+        <section id="book" class="section bg-inverse" aria-labelledby="cta-heading"
+            style="border-top: 4px solid var(--accent-secondary);">
+            <div class="container" style="text-align:center;">
+                <h2 id="cta-heading">Ready to Move Better?</h2>
+                <p style="font-size:1.25rem; margin-bottom: 2rem;">Stop managing pain. Start fixing it.</p>
+
+                <div style="display:flex; gap:1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#" class="btn btn-primary">Schedule Evaluation Online</a>
+                    <a href="tel:5413061099" class="btn btn-outline" aria-label="Call to schedule at 541 306 1099">Call
+                        (541) 306-1099</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-brand">
-                    <h2>RESOLVE PT</h2>
-                    <p style="margin-top:0.5rem; color:rgba(255,255,255,0.7);">Evidence-based physical therapy.</p>
+            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:2rem;">
+                <div>
+                    <h2 style="font-size:2rem; margin-bottom:0.5rem;">RESOLVE PT</h2>
+                    <p>Evidence-based physical therapy.</p>
                 </div>
-                <div class="footer-contact">
-                    <p><strong>ADDRESS:</strong> 1740 NW Pence Ln Ste 5. Bend, OR 97703</p>
-                    <p><strong>HOURS:</strong> M-Th 8:30-5:30. F 8:30-1:00</p>
-                    <p
-                        style="margin-top:1rem; color:var(--accent-orange); font-size:0.85rem; text-transform:uppercase;">
-                        *We accept most insurances including Medicare/OHP</p>
+                <div>
+                    <h3 style="font-size:1.25rem; color:var(--accent-secondary); margin-bottom:0.5rem;">CLINIC INFO</h3>
+                    <p>1740 NW Pence Ln Ste 5.<br>Bend, OR 97703</p>
+                    <a href="tel:5413061099" style="display:block; margin-top:0.5rem; font-weight:800;">(541)
+                        306-1099</a>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                &copy; 2026 Resolve Physical Therapy. All rights reserved. Let's get back outside.
             </div>
         </div>
     </footer>
